@@ -40,6 +40,6 @@ public class MainScene extends Scene {
     }
 
     private void setup() {
-
+        System.out.println("Setting up.");
     }
 }
