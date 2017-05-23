@@ -9,6 +9,7 @@ public interface Inventory {
 
     long getCash();
 
-    int FreeCards();
+    int getFreeCards();
+
     List<Street> getStreets();
 }
