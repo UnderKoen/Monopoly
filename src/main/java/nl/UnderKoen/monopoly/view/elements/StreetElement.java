@@ -4,6 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
@@ -126,12 +127,21 @@ public class StreetElement extends StackPane {
                 color.setStroke(Color.BLACK);
                 getChildren().add(color);
 
+                VBox top = new VBox(0);
+                top.setAlignment(Pos.TOP_CENTER);
+                top.setTranslateY(20);
+
                 text = new Text(street.getName());
                 text.setFont(new Font(6));
-                setAlignment(text, Pos.TOP_CENTER);
-                text.setTranslateY(20);
-                getChildren().add(text);
+                text.setTextAlignment(TextAlignment.CENTER);
+                top.getChildren().add(text);
 
+                text2 = new Text(street.getTown().getName());
+                text2.setFont(new Font(6));
+                text2.setTextAlignment(TextAlignment.CENTER);
+                top.getChildren().add(text2);
+
+                getChildren().add(top);
 
                 Text price = new Text("€" + street.getPrice());
                 price.setFont(new Font(6));
