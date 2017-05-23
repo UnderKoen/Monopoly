@@ -1,13 +1,12 @@
-package nl.UnderKoen.monopoly.scenes;
+package nl.UnderKoen.monopoly.view.scenes;
 
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.SceneAntialiasing;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Paint;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.StackPane;
 import nl.UnderKoen.monopoly.Main;
 
 /**
@@ -28,4 +27,5 @@ public class MainPane extends StackPane {
                 null, null,null,
                 new BackgroundSize(100, 100, true, true, true, true))));
     }
+
 }

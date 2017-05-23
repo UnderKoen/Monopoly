@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="client_main" target="1.8" />
+      <module name="client_test" target="1.8" />
       <module name="monopoly_main" target="1.8" />
       <module name="monopoly_test" target="1.8" />
     </bytecodeTargetLevel>

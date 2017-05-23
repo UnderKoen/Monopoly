@@ -1,10 +1,16 @@
 package nl.UnderKoen.monopoly;
 
 import javafx.application.Application;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import nl.UnderKoen.monopoly.scenes.MainPane;
-import nl.UnderKoen.monopoly.scenes.SetupPane;
+import javafx.util.Duration;
+import nl.UnderKoen.monopoly.view.elements.SpriteAnimation;
+import nl.UnderKoen.monopoly.view.scenes.MainPane;
+import nl.UnderKoen.monopoly.view.scenes.SetupPane;
 
 /**
  * Created by Under_Koen on 22-05-17.

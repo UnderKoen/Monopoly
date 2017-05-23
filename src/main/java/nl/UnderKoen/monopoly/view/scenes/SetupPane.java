@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.scenes;
+package nl.UnderKoen.monopoly.view.scenes;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;

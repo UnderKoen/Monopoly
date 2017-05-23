@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_main.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_test.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/monopoly.iml" filepath="$PROJECT_DIR$/.idea/modules/monopoly.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/monopoly_main.iml" filepath="$PROJECT_DIR$/.idea/modules/monopoly_main.iml" group="monopoly" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/monopoly_test.iml" filepath="$PROJECT_DIR$/.idea/modules/monopoly_test.iml" group="monopoly" />
