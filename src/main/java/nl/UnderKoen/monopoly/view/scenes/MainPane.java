@@ -7,7 +7,11 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import nl.UnderKoen.monopoly.Main;
+import nl.UnderKoen.monopoly.entities.Street;
+import nl.UnderKoen.monopoly.entities.impl.StreetImpl;
+import nl.UnderKoen.monopoly.view.elements.StreetElement;
 
 /**
  * Created by Under_Koen on 22-05-17.
@@ -26,6 +30,14 @@ public class MainPane extends StackPane {
         setBackground(new Background(new BackgroundImage(new Image(url),
                 null, null,null,
                 new BackgroundSize(100, 100, true, true, true, true))));
+        StreetImpl street = new StreetImpl();
+        street.setCategory(Street.Category.CHANCE);
+        street.setName("CHANCE");
+        street.setColor(Color.RED);
+        street.setPrice(265.6);
+        StreetElement streetElement = new StreetElement(street);
+        getChildren().add(streetElement);
+        setAlignment(streetElement, Pos.CENTER);
     }
 
 }
