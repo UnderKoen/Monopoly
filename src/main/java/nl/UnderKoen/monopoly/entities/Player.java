@@ -7,4 +7,6 @@ public interface Player {
     String getName();
 
     Inventory getInventory();
+
+    int FreeCards();
 }

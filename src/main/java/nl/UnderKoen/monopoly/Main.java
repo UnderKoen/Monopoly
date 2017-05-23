@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import nl.UnderKoen.monopoly.entities.Street;
 import nl.UnderKoen.monopoly.view.elements.SpriteAnimation;
 import nl.UnderKoen.monopoly.view.scenes.MainPane;
 import nl.UnderKoen.monopoly.view.scenes.SetupPane;
