@@ -27,6 +27,7 @@ public interface Street {
         ELECTRICITY,
         CHANCE,
         COMMUNITY_CHEST,
-        TAXES
+        INCOME_TAX,
+        LUXURY_TAX
     }
 }
