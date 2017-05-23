@@ -20,6 +20,7 @@ public class StreetElement extends StackPane {
         setAlignment(Pos.TOP_LEFT);
         switch (street.getCategory()) {
             case START:
+                ImageView icon;
                 break;
             case JAIL:
                 break;
@@ -54,6 +55,32 @@ public class StreetElement extends StackPane {
                 setMaxSize(50, 80);
                 break;
             case STATION:
+                base = new Rectangle(50, 80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                text = new Text(street.getName());
+                text.setTextAlignment(TextAlignment.CENTER);
+                text.setFont(new Font(6));
+                setAlignment(text, Pos.TOP_CENTER);
+                text.setTranslateY(10);
+                getChildren().add(text);
+
+                icon = new ImageView(new Image(Main.class.getResource("/icon/station.png").toString()));
+                icon.setFitHeight(40);
+                icon.setFitWidth(45);
+                icon.setTranslateY(5);
+                setAlignment(icon, Pos.CENTER);
+                getChildren().add(icon);
+
+                price = new Text("€" + street.getPrice());
+                price.setFont(new Font(6));
+                setAlignment(price, Pos.BOTTOM_CENTER);
+                price.setTranslateY(-5);
+                getChildren().add(price);
+
+                setMaxSize(50, 80);
                 break;
             case WATER_WORKS:
                 base = new Rectangle(50, 80);
@@ -68,7 +95,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                ImageView icon = new ImageView(new Image(Main.class.getResource("/icon/waterWorks.png").toString()));
+                icon = new ImageView(new Image(Main.class.getResource("/icon/waterWorks.png").toString()));
                 icon.setFitHeight(25);
                 icon.setFitWidth(40);
                 setAlignment(icon, Pos.CENTER);
@@ -152,7 +179,61 @@ public class StreetElement extends StackPane {
 
                 setMaxSize(50, 80);
                 break;
-            case TAXES:
+            case INCOME_TAX:
+                base = new Rectangle(50, 80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                text = new Text(street.getName());
+                text.setTextAlignment(TextAlignment.CENTER);
+                text.setFont(new Font(6));
+                setAlignment(text, Pos.TOP_CENTER);
+                text.setTranslateY(10);
+                getChildren().add(text);
+
+                icon = new ImageView(new Image(Main.class.getResource("/icon/incomeTax.png").toString()));
+                icon.setFitHeight(35);
+                icon.setFitWidth(30);
+                icon.setTranslateY(5);
+                setAlignment(icon, Pos.CENTER);
+                getChildren().add(icon);
+
+                price = new Text("€" + street.getPrice());
+                price.setFont(new Font(6));
+                setAlignment(price, Pos.BOTTOM_CENTER);
+                price.setTranslateY(-5);
+                getChildren().add(price);
+
+                setMaxSize(50, 80);
+                break;
+            case LUXURY_TAX:
+                base = new Rectangle(50, 80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                text = new Text(street.getName());
+                text.setTextAlignment(TextAlignment.CENTER);
+                text.setFont(new Font(6));
+                setAlignment(text, Pos.TOP_CENTER);
+                text.setTranslateY(10);
+                getChildren().add(text);
+
+                icon = new ImageView(new Image(Main.class.getResource("/icon/luxuryTax.png").toString()));
+                icon.setFitHeight(40);
+                icon.setFitWidth(40);
+                icon.setTranslateY(5);
+                setAlignment(icon, Pos.CENTER);
+                getChildren().add(icon);
+
+                price = new Text("€" + street.getPrice());
+                price.setFont(new Font(6));
+                setAlignment(price, Pos.BOTTOM_CENTER);
+                price.setTranslateY(-5);
+                getChildren().add(price);
+
+                setMaxSize(50, 80);
                 break;
         }
     }

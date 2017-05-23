@@ -31,10 +31,10 @@ public class MainPane extends StackPane {
                 null, null,null,
                 new BackgroundSize(100, 100, true, true, true, true))));
         StreetImpl street = new StreetImpl();
-        street.setCategory(Street.Category.WATER_WORKS);
-        street.setName("WATER WORKS");
+        street.setCategory(Street.Category.STATION);
+        street.setName("NORTH\nSTATION");
         street.setColor(Color.RED);
-        street.setPrice(150);
+        street.setPrice(200);
         StreetElement streetElement = new StreetElement(street);
         getChildren().add(streetElement);
         setAlignment(streetElement, Pos.CENTER);
