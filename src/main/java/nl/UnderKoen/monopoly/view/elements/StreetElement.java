@@ -20,26 +20,113 @@ public class StreetElement extends StackPane {
         setAlignment(Pos.TOP_LEFT);
         switch (street.getCategory()) {
             case START:
-                ImageView icon;
+                Rectangle base = new Rectangle(80,80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                Text text = new Text("COLLECT\n€200 SALARY\nAS YOU PASS");
+                text.setTextAlignment(TextAlignment.CENTER);
+                text.setFont(new Font(7));
+                text.setRotate(-45);
+                text.setTranslateY(11);
+                text.setTranslateX(0);
+                getChildren().add(text);
+
+                ImageView icon = new ImageView(new Image(Main.class.getResource("/icon/start.png").toString()));
+                icon.setFitHeight(70);
+                icon.setFitWidth(70);
+                setAlignment(icon, Pos.CENTER);
+                getChildren().add(icon);
+
+                setMaxSize(80, 80);
                 break;
             case JAIL:
+                base = new Rectangle(80,80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                icon = new ImageView(new Image(Main.class.getResource("/icon/jail.png").toString()));
+                icon.setFitHeight(80);
+                icon.setFitWidth(80);
+                setAlignment(icon, Pos.CENTER);
+                getChildren().add(icon);
+
+                setMaxSize(80, 80);
                 break;
             case VISIT:
+                base = new Rectangle(80,80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                text = new Text("GO TO");
+                text.setFont(new Font(10));
+                text.setRotate(-45);
+                text.setTranslateY(13);
+                text.setTranslateX(2);
+                getChildren().add(text);
+
+                icon = new ImageView(new Image(Main.class.getResource("/icon/gotoJail.png").toString()));
+                icon.setRotate(-45);
+                icon.setFitHeight(50);
+                icon.setFitWidth(50);
+                icon.setTranslateY(15);
+                icon.setTranslateX(15);
+                getChildren().add(icon);
+
+                Text text2 = new Text("JAIL");
+                text2.setFont(new Font(10));
+                text2.setRotate(-45);
+                text2.setTranslateY(57);
+                text2.setTranslateX(48);
+                getChildren().add(text2);
+
+                setMaxSize(80, 80);
                 break;
             case PARKING:
+                base = new Rectangle(80,80);
+                base.setFill(Color.rgb(202,250,222));
+                base.setStroke(Color.BLACK);
+                getChildren().add(base);
+
+                text = new Text("FREE");
+                text.setFont(new Font(10));
+                text.setRotate(-45);
+                text.setTranslateY(13);
+                text.setTranslateX(5);
+                getChildren().add(text);
+
+                icon = new ImageView(new Image(Main.class.getResource("/icon/freeParking.png").toString()));
+                icon.setRotate(-45);
+                icon.setFitHeight(50);
+                icon.setFitWidth(50);
+                icon.setTranslateY(15);
+                icon.setTranslateX(15);
+                getChildren().add(icon);
+
+                text2 = new Text("PARKING");
+                text2.setFont(new Font(10));
+                text2.setRotate(-45);
+                text2.setTranslateY(54);
+                text2.setTranslateX(40);
+                getChildren().add(text2);
+
+                setMaxSize(80, 80);
                 break;
             case NORMAL:
-                Rectangle base = new Rectangle(50,80);
+                base = new Rectangle(50,80);
                 base.setFill(Color.rgb(202,250,222));
                 base.setStroke(Color.BLACK);
                 getChildren().add(base);
 
                 Rectangle color = new Rectangle(50,15);
-                color.setFill(street.getColor());
+                color.setFill(street.getTown().getColor());
                 color.setStroke(Color.BLACK);
                 getChildren().add(color);
 
-                Text text = new Text(street.getName());
+                text = new Text(street.getName());
                 text.setFont(new Font(6));
                 setAlignment(text, Pos.TOP_CENTER);
                 text.setTranslateY(20);
