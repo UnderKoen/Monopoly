@@ -13,6 +13,8 @@ import nl.UnderKoen.monopoly.view.elements.SpriteAnimation;
 import nl.UnderKoen.monopoly.view.scenes.MainPane;
 import nl.UnderKoen.monopoly.view.scenes.SetupPane;
 
+import java.io.File;
+
 /**
  * Created by Under_Koen on 22-05-17.
  */
@@ -58,6 +60,23 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static String getDefaultWorkingDirectory() {
+        String workingDirectory;
+        String OS = (System.getProperty("os.name")).toUpperCase();
+        if (OS.contains("WIN")) {
+            workingDirectory = System.getenv("AppData");
+        } else {
+            workingDirectory = System.getProperty("user.home");
+            workingDirectory += "/Library/Application Support";
+        }
+        workingDirectory += "/Monopoly";
+        File dir = new File(workingDirectory);
+        if (!dir.exists()) {
+            dir.mkdir();
+        }
+        return workingDirectory;
     }
 }
 

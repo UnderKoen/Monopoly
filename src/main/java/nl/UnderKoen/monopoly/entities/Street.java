@@ -15,19 +15,16 @@ public interface Street {
     int getPrice();
 
     enum Category {
-        NORMAL,
         START,
         JAIL,
         VISIT,
         PARKING,
-        CHANCE,
-        TAXES,
-        COMMUNITY_CHEST,
+        NORMAL,
         STATION,
         WATER_WORKS,
-        ELECTRICITY;
+        ELECTRICITY,
+        CHANCE,
+        COMMUNITY_CHEST,
+        TAXES
     }
-
-
-
 }
