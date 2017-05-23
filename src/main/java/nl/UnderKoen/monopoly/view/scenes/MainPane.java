@@ -31,9 +31,9 @@ public class MainPane extends StackPane {
                 null, null,null,
                 new BackgroundSize(100, 100, true, true, true, true))));
         StreetImpl street = new StreetImpl();
-        street.setCategory(Street.Category.CHANCE);
-        street.setName("CHANCE");
-        street.setColor(Color.RED);
+        street.setCategory(Street.Category.JAIL);
+        street.setName("Go to Jail!");
+        street.setColor(Color.TRANSPARENT);
         street.setPrice(265.6);
         StreetElement streetElement = new StreetElement(street);
         getChildren().add(streetElement);
