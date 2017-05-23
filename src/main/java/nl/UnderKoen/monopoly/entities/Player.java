@@ -8,5 +8,5 @@ public interface Player {
 
     Inventory getInventory();
 
-    int FreeCards();
+
 }
