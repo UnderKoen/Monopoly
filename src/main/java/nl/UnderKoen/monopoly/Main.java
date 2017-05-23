@@ -25,13 +25,21 @@ public class Main extends Application {
 
     public static Stage stage;
 
-    public static int GAME_WIDHT = 1366;
-    public static int GAME_HEIGHT = 768;
+    public static int GAME_WIDHT = 896;
+    public static int GAME_HEIGHT = 504;
+
+    //Skips the setup screen
+    public final boolean TESTING = true;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         current = new Scene(new SetupPane(), 300, 400);
+        if (TESTING) {
+            gameStage = GameStage.Setup;
+            nextScene();
+            return;
+        }
         stage.setTitle("Setup");
         stage.setResizable(false);
         stage.setScene(current);

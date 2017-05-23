@@ -1,6 +1,8 @@
 package nl.UnderKoen.monopoly.entities;
 
 
+import javafx.scene.paint.Color;
+
 /**
  * Created by Under_Koen on 22-05-17.
  */
@@ -8,11 +10,11 @@ public interface Street {
 
     String getName();
 
-    int getColor();
+    Color getColor();
 
     Category getCategory();
 
-    int getPrice();
+    double getPrice();
 
     enum Category {
         START,
