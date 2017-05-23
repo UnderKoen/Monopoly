@@ -24,10 +24,6 @@ public class PlayerImpl implements Player {
         return inventory;
     }
 
-    @Override
-    public int FreeCards() { return freecards; }
-
-
     public void setName(String name) {
         this.name = name;
     }
