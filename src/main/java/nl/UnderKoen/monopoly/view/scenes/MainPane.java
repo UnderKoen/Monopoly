@@ -53,11 +53,6 @@ public class MainPane extends StackPane {
 
         List<Street> streets = new ArrayList<>();
 
-        StreetImpl jail = new StreetImpl();
-        jail.setCategory(Street.Category.JAIL);
-        jail.setCorner(true);
-        streets.add(jail);
-
         streets.add(haarlem.getStreet("BARTELJORIS-\nSTRAAT"));
 
         StreetImpl Elec = new StreetImpl();
@@ -90,17 +85,83 @@ public class MainPane extends StackPane {
         park.setCorner(true);
         streets.add(park);
 
-        int x = 0;
+        streets.addAll(streets);
+        streets.addAll(streets);
+
+        int x = 200;
+        int y = 200;
+        int rot = 0;
+        int time = 0;
         for (Street street : streets) {
+            switch (time) {
+                case 0:
+                    if (street.isCorner()) {
+                        rot += 90;
+                        x -= 65;
+                        break;
+                    }
+                    x -= 50;
+                    break;
+                case 1:
+                    if (street.isCorner()) {
+                        rot += 90;
+                        y -= 65;
+                        break;
+                    }
+                    y -= 50;
+                    break;
+                case 2:
+                    if (street.isCorner()) {
+                        rot += 90;
+                        x += 65;
+                        break;
+                    }
+                    x += 50;
+                    break;
+                case 3:
+                    if (street.isCorner()) {
+                        rot += 90;
+                        y += 65;
+                        break;
+                    }
+                    y += 50;
+                    break;
+            }
             StreetElement streetElement = new StreetElement(street);
             getChildren().add(streetElement);
+            streetElement.setRotate(rot);
             streetElement.setTranslateX(x);
-            setAlignment(streetElement, Pos.CENTER_RIGHT);
-            if (street.isCorner()) {
-                x -= 80;
-                continue;
+            streetElement.setTranslateY(y);
+            setAlignment(streetElement, Pos.CENTER);
+            switch (time) {
+                case 0:
+                    if (street.isCorner()) {
+                        time++;
+                        y -= 15;
+                        break;
+                    }
+                    break;
+                case 1:
+                    if (street.isCorner()) {
+                        time++;
+                        x += 15;
+                        break;
+                    }
+                    break;
+                case 2:
+                    if (street.isCorner()) {
+                        time++;
+                        y += 15;
+                        break;
+                    }
+                    break;
+                case 3:
+                    if (street.isCorner()) {
+                        time++;
+                        break;
+                    }
+                    break;
             }
-            x -= 50;
         }
     }
 

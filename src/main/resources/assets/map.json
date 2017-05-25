@@ -1,0 +1,447 @@
+{
+  "towns": [
+    {
+      "name": "ONS DORP",
+      "streets": [
+        {
+          "name": "DORPSTAAT",
+          "price": 60,
+          "housePrice": 50,
+          "rent": {
+            "none": 2,
+            "1": 10,
+            "2": 30,
+            "3": 90,
+            "4": 160,
+            "hotel": 250
+          }
+        },
+        {
+          "name": "BRINK",
+          "price": 60,
+          "housePrice": 50,
+          "rent": {
+            "none": 2,
+            "1": 10,
+            "2": 30,
+            "3": 90,
+            "4": 160,
+            "hotel": 250
+          }
+        }
+      ]
+    },
+    {
+      "name": "ARHNEM",
+      "streets": [
+        {
+          "name": "STEENSTRAAT",
+          "price": 100,
+          "housePrice": 50,
+          "rent": {
+            "none": 6,
+            "1": 30,
+            "2": 90,
+            "3": 270,
+            "4": 400,
+            "hotel": 550
+          }
+        },
+        {
+          "name": "KETELSTRAAT",
+          "price": 100,
+          "housePrice": 50,
+          "rent": {
+            "none": 6,
+            "1": 30,
+            "2": 90,
+            "3": 270,
+            "4": 400,
+            "hotel": 550
+          }
+        },
+        {
+          "name": "VELPERPLEIN",
+          "price": 120,
+          "housePrice": 50,
+          "rent": {
+            "none": 8,
+            "1": 40,
+            "2": 100,
+            "3": 300,
+            "4": 450,
+            "hotel": 600
+          }
+        }
+      ]
+    },
+    {
+      "name": "HAARLEM",
+      "streets": [
+        {
+          "name": "BARTELJORISSTRAAT",
+          "price": 140,
+          "housePrice": 100,
+          "rent": {
+            "none": 10,
+            "1": 50,
+            "2": 150,
+            "3": 450,
+            "4": 625,
+            "hotel": 750
+          }
+        },
+        {
+          "name": "ZIJLWEG",
+          "price": 140,
+          "housePrice": 100,
+          "rent": {
+            "none": 10,
+            "1": 50,
+            "2": 150,
+            "3": 450,
+            "4": 625,
+            "hotel": 750
+          }
+        },
+        {
+          "name": "HOUTSTRAAT",
+          "price": 160,
+          "housePrice": 100,
+          "rent": {
+            "none": 12,
+            "1": 60,
+            "2": 180,
+            "3": 500,
+            "4": 700,
+            "hotel": 900
+          }
+        }
+      ]
+    },
+    {
+      "name": "UTRECHT",
+      "streets": [
+        {
+          "name": "NEUDE",
+          "price": 180,
+          "housePrice": 100,
+          "rent": {
+            "none": 14,
+            "1": 70,
+            "2": 200,
+            "3": 550,
+            "4": 750,
+            "hotel": 950
+          }
+        },
+        {
+          "name": "BILTSTRAAT",
+          "price": 180,
+          "housePrice": 100,
+          "rent": {
+            "none": 14,
+            "1": 70,
+            "2": 200,
+            "3": 550,
+            "4": 750,
+            "hotel": 950
+          }
+        },
+        {
+          "name": "VREEBURG",
+          "price": 200,
+          "housePrice": 100,
+          "rent": {
+            "none": 16,
+            "1": 80,
+            "2": 220,
+            "3": 600,
+            "4": 800,
+            "hotel": 1000
+          }
+        }
+      ]
+    },
+    {
+      "name": "GRONINGEN",
+      "streets": [
+        {
+          "name": "A-KERKHOF",
+          "price": 220,
+          "housePrice": 150,
+          "rent": {
+            "none": 18,
+            "1": 90,
+            "2": 250,
+            "3": 700,
+            "4": 875,
+            "hotel": 1050
+          }
+        },
+        {
+          "name": "GROOTE MARKT",
+          "price": 220,
+          "housePrice": 150,
+          "rent": {
+            "none": 18,
+            "1": 90,
+            "2": 250,
+            "3": 700,
+            "4": 875,
+            "hotel": 1050
+          }
+        },
+        {
+          "name": "HEERESTRAAT",
+          "price": 240,
+          "housePrice": 150,
+          "rent": {
+            "none": 20,
+            "1": 100,
+            "2": 300,
+            "3": 750,
+            "4": 925,
+            "hotel": 1100
+          }
+        }
+      ]
+    },
+    {
+      "name": "'S-GRAVENHAGE",
+      "streets": [
+        {
+          "name": "SPUI",
+          "price": 260,
+          "housePrice": 150,
+          "rent": {
+            "none": 22,
+            "1": 110,
+            "2": 330,
+            "3": 800,
+            "4": 975,
+            "hotel": 1150
+          }
+        },
+        {
+          "name": "PLEIN",
+          "price": 260,
+          "housePrice": 150,
+          "rent": {
+            "none": 22,
+            "1": 110,
+            "2": 330,
+            "3": 800,
+            "4": 975,
+            "hotel": 1150
+          }
+        },
+        {
+          "name": "LANGE POTEN",
+          "price": 280,
+          "housePrice": 150,
+          "rent": {
+            "none": 24,
+            "1": 120,
+            "2": 360,
+            "3": 850,
+            "4": 1025,
+            "hotel": 1200
+          }
+        }
+      ]
+    },
+    {
+      "name": "ROTTERDAM",
+      "streets": [
+        {
+          "name": "HOFPLEIN",
+          "price": 300,
+          "housePrice": 200,
+          "rent": {
+            "none": 26,
+            "1": 130,
+            "2": 390,
+            "3": 900,
+            "4": 1100,
+            "hotel": 1275
+          }
+        },
+        {
+          "name": "BLAAK",
+          "price": 300,
+          "housePrice": 200,
+          "rent": {
+            "none": 26,
+            "1": 130,
+            "2": 390,
+            "3": 900,
+            "4": 1100,
+            "hotel": 1275
+          }
+        },
+        {
+          "name": "COOLSINGEL",
+          "price": 320,
+          "housePrice": 200,
+          "rent": {
+            "none": 28,
+            "1": 150,
+            "2": 450,
+            "3": 1000,
+            "4": 1200,
+            "hotel": 1400
+          }
+        }
+      ]
+    },
+    {
+      "name": "AMSTERDAM",
+      "streets": [
+        {
+          "name": "LEIDSCHESTRAAT",
+          "price": 350,
+          "housePrice": 200,
+          "rent": {
+            "none": 35,
+            "1": 175,
+            "2": 500,
+            "3": 1100,
+            "4": 1300,
+            "hotel": 1500
+          }
+        },
+        {
+          "name": "KALVERSTRAAT",
+          "price": 400,
+          "housePrice": 200,
+          "rent": {
+            "none": 50,
+            "1": 200,
+            "2": 600,
+            "3": 1400,
+            "4": 1700,
+            "hotel": 2000
+          }
+        }
+      ]
+    }
+  ],
+  "stations": {
+    "rent": {
+      "1": 25,
+      "2": 50,
+      "3": 100,
+      "4": 200
+    },
+    "NORTH": {
+      "name": "STATION NOORD",
+      "price": 200
+    },
+    "EAST": {
+      "name": "STATION OOST",
+      "price": 200
+    },
+    "SOUTH": {
+      "name": "STATION ZUID",
+      "price": 200
+    },
+    "WEST": {
+      "name": "STATION WEST",
+      "price": 200
+    }
+  },
+  "taxes": {
+    "income": {
+      "name": "INKOMSTEN BELASTING",
+      "price": 200
+    },
+    "luxury": {
+      "name": "EXTRA BELASTING",
+      "price": 100
+    }
+  },
+  "supplies": {
+    "price": {
+      "1": 4,
+      "2": 10
+    },
+    "names": {
+      "electricity": "ELECTRICITEITSBEDRIJF",
+      "water": "WATERLEIDING"
+    }
+  },
+  "special": {
+    "change": {
+      "name": "KANS",
+      "cards": [
+        {
+          "type": "pay",
+          "amount": 20
+        },
+        {
+          "type": "get",
+          "amount": "10"
+        },
+        {
+          "type": "goto",
+          //ID of street
+          "to": 15
+        },
+        {
+          "type": "goback",
+          //number of streets
+          "to": 3
+        },
+        {
+          "type": "gotoPrison"
+        },
+        {
+          "type": "freeJail"
+        },
+        {
+          "type": "propertyTAX",
+          "house": 25,
+          "hotel": 100
+        }
+      ]
+    },
+    "communityChest": {
+      "name": "ALGEMEEN FONDS",
+      "cards": [
+        {
+          "type": "pay",
+          "amount": 20
+        },
+        {
+          "type": "payOrTakeCard",
+          "amount": 10
+        },
+        {
+          "type": "get",
+          "amount": "10"
+        },
+        {
+          "type": "getFromEverybody",
+          "amount": 10
+        },
+        {
+          "type": "goto",
+          //ID of street
+          "to": 15
+        },
+        {
+          "type": "goback",
+          //ID of street
+          "to": 3
+        },
+        {
+          "type": "gotoPrison"
+        },
+        {
+          "type": "freeJail"
+        }
+      ]
+    }
+  }
+}
