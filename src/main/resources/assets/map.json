@@ -343,19 +343,19 @@
       "4": 200
     },
     "NORTH": {
-      "name": "STATION NOORD",
+      "name": "STATION\nNOORD",
       "price": 200
     },
     "EAST": {
-      "name": "STATION OOST",
+      "name": "STATION\nOOST",
       "price": 200
     },
     "SOUTH": {
-      "name": "STATION ZUID",
+      "name": "STATION\nZUID",
       "price": 200
     },
     "WEST": {
-      "name": "STATION WEST",
+      "name": "STATION\nWEST",
       "price": 200
     }
   },
