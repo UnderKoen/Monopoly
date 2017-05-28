@@ -27,7 +27,7 @@ public class StreetElement extends StackPane {
                 base.setStroke(Color.BLACK);
                 getChildren().add(base);
 
-                Text text = new Text("COLLECT\n€200 SALARY\nAS YOU PASS");
+                Text text = new Text("COLLECT\n€" + street.getPrice() + " SALARY\nAS YOU PASS");
                 text.setTextAlignment(TextAlignment.CENTER);
                 text.setFont(new Font(7));
                 text.setRotate(-45);

@@ -25,8 +25,8 @@ public class Main extends Application {
 
     public static Stage stage;
 
-    public static int GAME_WIDHT = 896;
-    public static int GAME_HEIGHT = 504;
+    public static int GAME_WIDHT = 1280;
+    public static int GAME_HEIGHT = 720;
 
     //Skips the setup screen
     public final boolean TESTING = true;

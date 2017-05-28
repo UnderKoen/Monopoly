@@ -35,8 +35,6 @@ public class SetupPane extends StackPane {
         vBox.getChildren().add(screen);
 
         ChoiceBox t = new ChoiceBox<>();
-        t.getItems().add("896X504");
-        t.getItems().add("1024X576");
         t.getItems().add("1280X720");
         t.getItems().add("1366X768");
         t.getItems().add("1920X1080");
