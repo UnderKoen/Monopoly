@@ -6,6 +6,7 @@ import com.google.gson.JsonParser;
 import javafx.geometry.Pos;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import nl.UnderKoen.monopoly.Main;
 import nl.UnderKoen.monopoly.builders.TownBuilder;
 import nl.UnderKoen.monopoly.entities.Street;
 import nl.UnderKoen.monopoly.entities.Town;
@@ -97,9 +98,8 @@ public class MapElement extends StackPane {
                     break;
             }
         }
-        setMaxSize(50, 50);
-        setTranslateX(305 - 40);
-        setTranslateY(305 - 40);
+        setMinSize(610, 610);
+        setMaxSize(610, 610);
     }
 
     private String getMapInfo() {

@@ -221,6 +221,7 @@ public class StreetElement extends StackPane {
                 getChildren().add(text);
 
                 icon = new ImageView(new Image(Main.class.getResource("/icon/electricity.png").toString()));
+                icon.setTranslateY(5);
                 icon.setFitHeight(50);
                 icon.setFitWidth(40);
                 setAlignment(icon, Pos.CENTER);

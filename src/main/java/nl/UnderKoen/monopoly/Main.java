@@ -1,5 +1,7 @@
 package nl.UnderKoen.monopoly;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
@@ -14,6 +16,7 @@ import nl.UnderKoen.monopoly.view.scenes.MainPane;
 import nl.UnderKoen.monopoly.view.scenes.SetupPane;
 
 import java.io.File;
+import java.util.Scanner;
 
 /**
  * Created by Under_Koen on 22-05-17.
@@ -21,56 +24,91 @@ import java.io.File;
 public class Main extends Application {
     public static Scene current;
 
+    public static GameStage lastGameStage;
+
     public static GameStage gameStage;
 
     public static Stage stage;
 
-    public static int GAME_WIDHT = 1280;
-    public static int GAME_HEIGHT = 720;
+    public static final String OPTION_DIR = Main.getAppDataDirectory() + "/.Monopoly";
+
+    public static int GAME_WIDHT = 1024;
+    public static int GAME_HEIGHT = 576;
 
     //Skips the setup screen
-    public final boolean TESTING = true;
+    public final boolean TESTING = false;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        File optionDir = new File(OPTION_DIR);
+        if (!optionDir.exists()) {
+            optionDir.mkdirs();
+        }
         stage = primaryStage;
-        current = new Scene(new SetupPane(), 300, 400);
         if (TESTING) {
             gameStage = GameStage.Setup;
             nextScene();
             return;
         }
-        stage.setTitle("Setup");
-        stage.setResizable(false);
-        stage.setScene(current);
-        stage.show();
-        gameStage = GameStage.Setup;
+        gotoScene(GameStage.Setup);
     }
 
     public static void nextScene() {
+        lastGameStage = gameStage;
         switch (gameStage) {
             case Setup:
-                current = new Scene(new MainPane(), GAME_WIDHT, GAME_HEIGHT);
-                stage.close();
-                stage = new Stage();
-                stage.setTitle("Monopoly");
-                stage.setResizable(true);
-                stage.setScene(current);
-                stage.show();
-                gameStage = GameStage.MainScreen;
+                gotoScene(GameStage.MainScreen);
                 break;
             case MainScreen:
+                gotoScene(GameStage.Game);
                 break;
             case Game:
                 break;
         }
     }
 
+    public static void goBackScene() {
+        gotoScene(lastGameStage);
+    }
+
+    public static void gotoScene(GameStage gameStage) {
+        switch (gameStage) {
+            case Setup:
+                current = new Scene(new SetupPane(), 300, 400);
+                stage.close();
+                stage = new Stage();
+                stage.setTitle("Setup");
+                stage.setResizable(false);
+                stage.setScene(current);
+                stage.show();
+                break;
+            case MainScreen:
+                current = new Scene(new MainPane(), GAME_WIDHT, GAME_HEIGHT);
+                stage.close();
+                stage = new Stage();
+                stage.setTitle("Monopoly");
+                stage.setResizable(false);
+                stage.setScene(current);
+                stage.show();
+                break;
+            case Game:
+                current = new Scene(new MainPane(), GAME_WIDHT, GAME_HEIGHT);
+                stage.close();
+                stage = new Stage();
+                stage.setTitle("Monopoly");
+                stage.setResizable(false);
+                stage.setScene(current);
+                stage.show();
+                break;
+        }
+        Main.gameStage = gameStage;
+    }
+
     public static void main(String[] args) {
         launch(args);
     }
 
-    public static String getDefaultWorkingDirectory() {
+    public static String getAppDataDirectory() {
         String workingDirectory;
         String OS = (System.getProperty("os.name")).toUpperCase();
         if (OS.contains("WIN")) {
@@ -79,15 +117,31 @@ public class Main extends Application {
             workingDirectory = System.getProperty("user.home");
             workingDirectory += "/Library/Application Support";
         }
-        workingDirectory += "/Monopoly";
-        File dir = new File(workingDirectory);
-        if (!dir.exists()) {
-            dir.mkdir();
-        }
         return workingDirectory;
+    }
+
+    public static String getDefaultWorkingDirectory() {
+        return getAppDataDirectory() + "/Monopoly";
+    }
+
+    public static String getWorkingDirectory() {
+        File optionDir = new File(OPTION_DIR + ".options.json");
+        if (optionDir.exists()) {
+            try (Scanner scanner = new Scanner(optionDir)) {
+                String json = scanner.nextLine();
+                JsonParser parser = new JsonParser();
+                JsonObject options = parser.parse(json).getAsJsonObject();
+                return options.get("location").getAsString();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            return getDefaultWorkingDirectory();
+        }
+        return null;
     }
 }
 
 enum GameStage {
-    Setup, MainScreen, Game
+    Setup, MainScreen, CreateGame, SelectGame, Options, Game
 }
