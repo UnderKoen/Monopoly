@@ -3,15 +3,9 @@ package nl.UnderKoen.monopoly;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.application.Application;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-import nl.UnderKoen.monopoly.entities.Street;
-import nl.UnderKoen.monopoly.view.elements.SpriteAnimation;
+import nl.UnderKoen.monopoly.view.scenes.GamePane;
 import nl.UnderKoen.monopoly.view.scenes.MainPane;
 import nl.UnderKoen.monopoly.view.scenes.SetupPane;
 
@@ -62,8 +56,6 @@ public class Main extends Application {
             case MainScreen:
                 gotoScene(GameStage.Game);
                 break;
-            case Game:
-                break;
         }
     }
 
@@ -74,29 +66,29 @@ public class Main extends Application {
     public static void gotoScene(GameStage gameStage) {
         switch (gameStage) {
             case Setup:
-                current = new Scene(new SetupPane(), 300, 400);
                 stage.close();
                 stage = new Stage();
                 stage.setTitle("Setup");
                 stage.setResizable(false);
+                current = new Scene(new SetupPane(), 300, 400);
                 stage.setScene(current);
                 stage.show();
                 break;
             case MainScreen:
-                current = new Scene(new MainPane(), GAME_WIDHT, GAME_HEIGHT);
                 stage.close();
                 stage = new Stage();
                 stage.setTitle("Monopoly");
                 stage.setResizable(false);
+                current = new Scene(new MainPane(), GAME_WIDHT, GAME_HEIGHT);
                 stage.setScene(current);
                 stage.show();
                 break;
             case Game:
-                current = new Scene(new MainPane(), GAME_WIDHT, GAME_HEIGHT);
                 stage.close();
                 stage = new Stage();
                 stage.setTitle("Monopoly");
-                stage.setResizable(false);
+                stage.setResizable(true);
+                current = new Scene(new GamePane(), GAME_WIDHT, GAME_HEIGHT);
                 stage.setScene(current);
                 stage.show();
                 break;

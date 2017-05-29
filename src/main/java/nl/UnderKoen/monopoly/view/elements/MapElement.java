@@ -25,8 +25,8 @@ public class MapElement extends StackPane {
 
     public MapElement() {
         setup();
-        int x = -30;
-        int y = 0;
+        int x = 250;
+        int y = 305-40;
         int rot = 0;
         int time = 0;
         for (Street street : streets) {
@@ -34,7 +34,7 @@ public class MapElement extends StackPane {
                 case 0:
                     if (street.isCorner()) {
                         rot += 90;
-                        x -= 50;
+                        x -= 65;
                         break;
                     }
                     x -= 50;
@@ -42,7 +42,6 @@ public class MapElement extends StackPane {
                 case 1:
                     if (street.isCorner()) {
                         rot += 90;
-                        x += 15;
                         y -= 65;
                         break;
                     }
@@ -51,7 +50,7 @@ public class MapElement extends StackPane {
                 case 2:
                     if (street.isCorner()) {
                         rot += 90;
-                        x += 80;
+                        x += 65;
                         break;
                     }
                     x += 50;
@@ -59,7 +58,6 @@ public class MapElement extends StackPane {
                 case 3:
                     if (street.isCorner()) {
                         rot += 90;
-                        x += 15;
                         y += 65;
                         break;
                     }
@@ -71,12 +69,11 @@ public class MapElement extends StackPane {
             streetElement.setRotate(rot);
             streetElement.setTranslateX(x);
             streetElement.setTranslateY(y);
-            setAlignment(streetElement, Pos.BOTTOM_RIGHT);
+            setAlignment(streetElement, Pos.CENTER);
             switch (time) {
                 case 0:
                     if (street.isCorner()) {
                         time++;
-                        x -= 15;
                         y -= 15;
                         break;
                     }
@@ -84,7 +81,7 @@ public class MapElement extends StackPane {
                 case 1:
                     if (street.isCorner()) {
                         time++;
-                        //x += 15;
+                        x += 15;
                         break;
                     }
                     break;
@@ -92,14 +89,15 @@ public class MapElement extends StackPane {
                     if (street.isCorner()) {
                         time++;
                         y += 15;
-                        x -= 15;
                         break;
                     }
                     break;
             }
         }
-        setMinSize(610, 610);
-        setMaxSize(610, 610);
+        //setMinSize(610, 610);
+        maxHeightProperty().bind(scaleYProperty().multiply(610));
+        maxWidthProperty().bind(scaleXProperty().multiply(610));
+        //setMaxSize(510, 510);
     }
 
     private String getMapInfo() {
