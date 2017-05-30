@@ -1,7 +1,7 @@
-package nl.UnderKoen.monopoly.entities.impl;
+package nl.UnderKoen.monopoly.client.entities.impl;
 
-import nl.UnderKoen.monopoly.entities.Inventory;
-import nl.UnderKoen.monopoly.entities.Player;
+import nl.UnderKoen.monopoly.client.entities.Inventory;
+import nl.UnderKoen.monopoly.client.entities.Player;
 
 /**
  * Created by Under_Koen on 22-05-17.

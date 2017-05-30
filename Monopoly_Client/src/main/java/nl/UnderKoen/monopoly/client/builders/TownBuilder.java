@@ -1,10 +1,10 @@
-package nl.UnderKoen.monopoly.builders;
+package nl.UnderKoen.monopoly.client.builders;
 
 import javafx.scene.paint.Color;
-import nl.UnderKoen.monopoly.entities.Street;
-import nl.UnderKoen.monopoly.entities.Town;
-import nl.UnderKoen.monopoly.entities.impl.StreetImpl;
-import nl.UnderKoen.monopoly.entities.impl.TownImpl;
+import nl.UnderKoen.monopoly.client.entities.Street;
+import nl.UnderKoen.monopoly.client.entities.Town;
+import nl.UnderKoen.monopoly.client.entities.impl.StreetImpl;
+import nl.UnderKoen.monopoly.client.entities.impl.TownImpl;
 
 import java.util.ArrayList;
 import java.util.List;

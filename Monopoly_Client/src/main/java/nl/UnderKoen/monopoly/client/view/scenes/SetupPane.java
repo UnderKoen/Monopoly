@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.view.scenes;
+package nl.UnderKoen.monopoly.client.view.scenes;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -15,7 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
-import nl.UnderKoen.monopoly.Main;
+import nl.UnderKoen.monopoly.client.Main;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -68,7 +68,9 @@ public class SetupPane extends StackPane {
             chooser.setInitialDirectory(new File(Main.getAppDataDirectory()));
             chooser.setTitle("Standard Location");
             File selectedDirectory = chooser.showDialog(Main.stage);
-            location.setText(selectedDirectory.getAbsolutePath());
+            if (selectedDirectory != null) {
+                location.setText(selectedDirectory.getAbsolutePath());
+            }
         });
         standardLocation.getChildren().add(button);
 

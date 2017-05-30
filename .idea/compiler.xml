@@ -4,7 +4,13 @@
     <bytecodeTargetLevel>
       <module name="client_main" target="1.8" />
       <module name="client_test" target="1.8" />
+      <module name="Monopoly_Client_main" target="1.8" />
+      <module name="Monopoly_Client_test" target="1.8" />
+      <module name="Monopoly_Common_main" target="1.8" />
+      <module name="Monopoly_Common_test" target="1.8" />
       <module name="monopoly_main" target="1.8" />
+      <module name="Monopoly_Server_main" target="1.8" />
+      <module name="Monopoly_Server_test" target="1.8" />
       <module name="monopoly_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>

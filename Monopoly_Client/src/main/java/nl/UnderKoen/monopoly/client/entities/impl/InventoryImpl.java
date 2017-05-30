@@ -1,7 +1,7 @@
-package nl.UnderKoen.monopoly.entities.impl;
+package nl.UnderKoen.monopoly.client.entities.impl;
 
-import nl.UnderKoen.monopoly.entities.Inventory;
-import nl.UnderKoen.monopoly.entities.Street;
+import nl.UnderKoen.monopoly.client.entities.Inventory;
+import nl.UnderKoen.monopoly.client.entities.Street;
 
 import java.util.List;
 

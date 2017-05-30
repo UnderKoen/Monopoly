@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.view.elements;
+package nl.UnderKoen.monopoly.client.view.elements;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -6,11 +6,10 @@ import com.google.gson.JsonParser;
 import javafx.geometry.Pos;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import nl.UnderKoen.monopoly.Main;
-import nl.UnderKoen.monopoly.builders.TownBuilder;
-import nl.UnderKoen.monopoly.entities.Street;
-import nl.UnderKoen.monopoly.entities.Town;
-import nl.UnderKoen.monopoly.entities.impl.StreetImpl;
+import nl.UnderKoen.monopoly.client.builders.TownBuilder;
+import nl.UnderKoen.monopoly.client.entities.Street;
+import nl.UnderKoen.monopoly.client.entities.Town;
+import nl.UnderKoen.monopoly.client.entities.impl.StreetImpl;
 
 import java.io.InputStream;
 import java.util.ArrayList;

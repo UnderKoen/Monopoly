@@ -1,8 +1,8 @@
-package nl.UnderKoen.monopoly.entities.impl;
+package nl.UnderKoen.monopoly.client.entities.impl;
 
 import javafx.scene.paint.Color;
-import nl.UnderKoen.monopoly.entities.Street;
-import nl.UnderKoen.monopoly.entities.Town;
+import nl.UnderKoen.monopoly.client.entities.Street;
+import nl.UnderKoen.monopoly.client.entities.Town;
 
 import java.util.List;
 

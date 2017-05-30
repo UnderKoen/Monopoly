@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.view.scenes;
+package nl.UnderKoen.monopoly.client.view.scenes;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -6,7 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import nl.UnderKoen.monopoly.Main;
+import nl.UnderKoen.monopoly.client.Main;
 
 /**
  * Created by Under_Koen on 22-05-17.

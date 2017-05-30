@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.entities;
+package nl.UnderKoen.monopoly.client.entities;
 
 /**
  * Created by Under_Koen on 22-05-17.

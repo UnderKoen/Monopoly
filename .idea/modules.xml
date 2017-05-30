@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Client.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Client.iml" group="Monopoly_Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Client/Monopoly_Client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Client/Monopoly_Client_main.iml" group="Monopoly_Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Client/Monopoly_Client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Client/Monopoly_Client_test.iml" group="Monopoly_Client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Common.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Common.iml" group="Monopoly_Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Common/Monopoly_Common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Common/Monopoly_Common_main.iml" group="Monopoly_Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Common/Monopoly_Common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Common/Monopoly_Common_test.iml" group="Monopoly_Common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Server.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Server.iml" group="Monopoly_Server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Server/Monopoly_Server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Server/Monopoly_Server_main.iml" group="Monopoly_Server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Monopoly_Server/Monopoly_Server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Monopoly_Server/Monopoly_Server_test.iml" group="Monopoly_Server" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client.iml" group="client" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/monopoly.iml" filepath="$PROJECT_DIR$/.idea/modules/monopoly.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/monopoly_main.iml" filepath="$PROJECT_DIR$/.idea/modules/monopoly_main.iml" group="monopoly" />

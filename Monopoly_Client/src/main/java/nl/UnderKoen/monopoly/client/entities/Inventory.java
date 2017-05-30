@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.entities;
+package nl.UnderKoen.monopoly.client.entities;
 
 import java.util.List;
 

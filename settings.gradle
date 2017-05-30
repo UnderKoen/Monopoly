@@ -1,3 +1,6 @@
 rootProject.name = 'monopoly'
 include 'client'
+include 'Monopoly_Client'
+include 'Monopoly_Common'
+include 'Monopoly_Server'
 

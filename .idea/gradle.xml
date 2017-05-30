@@ -10,6 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Monopoly_Client" />
+            <option value="$PROJECT_DIR$/Monopoly_Common" />
+            <option value="$PROJECT_DIR$/Monopoly_Server" />
             <option value="$PROJECT_DIR$/client" />
           </set>
         </option>

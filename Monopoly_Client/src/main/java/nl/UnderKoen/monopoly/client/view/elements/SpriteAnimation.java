@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.view.elements;
+package nl.UnderKoen.monopoly.client.view.elements;
 
 /**
  * Created by Under_Koen on 23-05-17.

@@ -1,9 +1,8 @@
-package nl.UnderKoen.monopoly.view.elements;
+package nl.UnderKoen.monopoly.client.view.elements;
 
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -11,8 +10,8 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
-import nl.UnderKoen.monopoly.Main;
-import nl.UnderKoen.monopoly.entities.Street;
+import nl.UnderKoen.monopoly.client.Main;
+import nl.UnderKoen.monopoly.client.entities.Street;
 
 /**
  * Created by Under_Koen on 23-05-17.

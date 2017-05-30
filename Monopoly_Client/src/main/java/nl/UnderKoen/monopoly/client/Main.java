@@ -1,13 +1,13 @@
-package nl.UnderKoen.monopoly;
+package nl.UnderKoen.monopoly.client;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import nl.UnderKoen.monopoly.view.scenes.GamePane;
-import nl.UnderKoen.monopoly.view.scenes.MainPane;
-import nl.UnderKoen.monopoly.view.scenes.SetupPane;
+import nl.UnderKoen.monopoly.client.view.scenes.GamePane;
+import nl.UnderKoen.monopoly.client.view.scenes.MainPane;
+import nl.UnderKoen.monopoly.client.view.scenes.SetupPane;
 
 import java.io.File;
 import java.util.Scanner;
