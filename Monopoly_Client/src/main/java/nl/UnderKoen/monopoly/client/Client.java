@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 import nl.UnderKoen.monopoly.client.view.scenes.GamePane;
 import nl.UnderKoen.monopoly.client.view.scenes.MainPane;
 import nl.UnderKoen.monopoly.client.view.scenes.SetupPane;
+import nl.UnderKoen.monopoly.common.enumeration.GameStage;
 
 import java.io.File;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ import java.util.Scanner;
 /**
  * Created by Under_Koen on 22-05-17.
  */
-public class Main extends Application {
+public class Client extends Application {
     public static Scene current;
 
     public static GameStage lastGameStage;
@@ -24,7 +25,7 @@ public class Main extends Application {
 
     public static Stage stage;
 
-    public static final String OPTION_DIR = Main.getAppDataDirectory() + "/.Monopoly";
+    public static final String OPTION_DIR = getAppDataDirectory() + "/.Monopoly";
 
     public static int GAME_WIDHT = 1024;
     public static int GAME_HEIGHT = 576;
@@ -40,21 +41,21 @@ public class Main extends Application {
         }
         stage = primaryStage;
         if (TESTING) {
-            gameStage = GameStage.Setup;
+            gameStage = GameStage.SETUP;
             nextScene();
             return;
         }
-        gotoScene(GameStage.Setup);
+        gotoScene(GameStage.SETUP);
     }
 
     public static void nextScene() {
         lastGameStage = gameStage;
         switch (gameStage) {
-            case Setup:
-                gotoScene(GameStage.MainScreen);
+            case SETUP:
+                gotoScene(GameStage.MAIN_SCREEN);
                 break;
-            case MainScreen:
-                gotoScene(GameStage.Game);
+            case MAIN_SCREEN:
+                gotoScene(GameStage.GAME);
                 break;
         }
     }
@@ -65,7 +66,7 @@ public class Main extends Application {
 
     public static void gotoScene(GameStage gameStage) {
         switch (gameStage) {
-            case Setup:
+            case SETUP:
                 stage.close();
                 stage = new Stage();
                 stage.setTitle("Setup");
@@ -74,7 +75,7 @@ public class Main extends Application {
                 stage.setScene(current);
                 stage.show();
                 break;
-            case MainScreen:
+            case MAIN_SCREEN:
                 stage.close();
                 stage = new Stage();
                 stage.setTitle("Monopoly");
@@ -83,7 +84,7 @@ public class Main extends Application {
                 stage.setScene(current);
                 stage.show();
                 break;
-            case Game:
+            case GAME:
                 stage.close();
                 stage = new Stage();
                 stage.setTitle("Monopoly");
@@ -93,7 +94,7 @@ public class Main extends Application {
                 stage.show();
                 break;
         }
-        Main.gameStage = gameStage;
+        Client.gameStage = gameStage;
     }
 
     public static void main(String[] args) {
@@ -132,8 +133,4 @@ public class Main extends Application {
         }
         return null;
     }
-}
-
-enum GameStage {
-    Setup, MainScreen, CreateGame, SelectGame, Options, Game
 }

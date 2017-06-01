@@ -2,7 +2,7 @@ package nl.UnderKoen.monopoly.client.view.scenes;
 
 import javafx.geometry.Pos;
 import javafx.scene.layout.StackPane;
-import nl.UnderKoen.monopoly.client.Main;
+import nl.UnderKoen.monopoly.client.Client;
 import nl.UnderKoen.monopoly.client.view.elements.MapElement;
 
 /**
@@ -15,8 +15,8 @@ public class GamePane extends StackPane {
 
     private void setup() {
         MapElement map = new MapElement();
-        map.scaleYProperty().bind(Main.stage.heightProperty().divide(610).multiply(0.75));
-        map.scaleXProperty().bind(Main.stage.heightProperty().divide(610).multiply(0.75));
+        map.scaleYProperty().bind(Client.stage.heightProperty().divide(610).multiply(0.75));
+        map.scaleXProperty().bind(Client.stage.heightProperty().divide(610).multiply(0.75));
         getChildren().add(map);
         setAlignment(map, Pos.TOP_CENTER);
     }

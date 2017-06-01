@@ -6,7 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
-import nl.UnderKoen.monopoly.client.Main;
+import nl.UnderKoen.monopoly.client.Client;
 
 /**
  * Created by Under_Koen on 22-05-17.
@@ -17,7 +17,7 @@ public class MainPane extends StackPane {
     }
 
     private void setup() {
-        String url = Main.class.getResource("/background.png").toString();
+        String url = Client.class.getResource("/background.png").toString();
         setBackground(new Background(new BackgroundImage(new Image(url),
                 null, null, null,
                 new BackgroundSize(100, 100, true, true, true, true))));
@@ -27,7 +27,7 @@ public class MainPane extends StackPane {
         //menu.setTranslateY(100);
         getChildren().add(menu);
 
-        url = Main.class.getResource("/logo.png").toString();
+        url = Client.class.getResource("/logo.png").toString();
         ImageView image = new ImageView(new Image(url));
         image.setFitWidth(2000*0.2);
         image.setFitHeight(687*0.2);
@@ -35,14 +35,14 @@ public class MainPane extends StackPane {
 
         Button startNew = new Button("Start new game");
         startNew.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-            Main.nextScene();
+            Client.nextScene();
         });
         startNew.setPrefSize(400,40);
         menu.getChildren().add(startNew);
 
         Button startOld = new Button("Start old game");
         startOld.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-            Main.nextScene();
+            Client.nextScene();
         });
         startOld.setPrefSize(400,40);
         menu.getChildren().add(startOld);

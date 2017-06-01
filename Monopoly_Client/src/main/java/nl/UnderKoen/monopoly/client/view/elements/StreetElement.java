@@ -10,7 +10,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
-import nl.UnderKoen.monopoly.client.Main;
+import nl.UnderKoen.monopoly.client.Client;
 import nl.UnderKoen.monopoly.client.entities.Street;
 
 /**
@@ -34,7 +34,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateX(0);
                 getChildren().add(text);
 
-                ImageView icon = new ImageView(new Image(Main.class.getResource("/icon/start.png").toString()));
+                ImageView icon = new ImageView(new Image(Client.class.getResource("/icon/start.png").toString()));
                 icon.setFitHeight(70);
                 icon.setFitWidth(70);
                 setAlignment(icon, Pos.CENTER);
@@ -48,7 +48,7 @@ public class StreetElement extends StackPane {
                 base.setStroke(Color.BLACK);
                 getChildren().add(base);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/jail.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/jail.png").toString()));
                 icon.setFitHeight(80);
                 icon.setFitWidth(80);
                 setAlignment(icon, Pos.CENTER);
@@ -69,7 +69,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateX(2);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/gotoJail.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/gotoJail.png").toString()));
                 icon.setRotate(-45);
                 icon.setFitHeight(50);
                 icon.setFitWidth(50);
@@ -99,7 +99,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateX(5);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/freeParking.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/freeParking.png").toString()));
                 icon.setRotate(-45);
                 icon.setFitHeight(50);
                 icon.setFitWidth(50);
@@ -164,7 +164,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/station.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/station.png").toString()));
                 icon.setFitHeight(40);
                 icon.setFitWidth(45);
                 icon.setTranslateY(5);
@@ -192,7 +192,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/waterWorks.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/waterWorks.png").toString()));
                 icon.setFitHeight(25);
                 icon.setFitWidth(40);
                 setAlignment(icon, Pos.CENTER);
@@ -219,7 +219,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/electricity.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/electricity.png").toString()));
                 icon.setTranslateY(5);
                 icon.setFitHeight(50);
                 icon.setFitWidth(40);
@@ -247,7 +247,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/chance.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/chance.png").toString()));
                 icon.setFitHeight(60);
                 icon.setFitWidth(30);
                 icon.setTranslateY(5);
@@ -269,7 +269,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/communityChest.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/communityChest.png").toString()));
                 icon.setFitHeight(40);
                 icon.setFitWidth(40);
                 setAlignment(icon, Pos.CENTER);
@@ -290,7 +290,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/incomeTax.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/incomeTax.png").toString()));
                 icon.setFitHeight(35);
                 icon.setFitWidth(30);
                 icon.setTranslateY(5);
@@ -318,7 +318,7 @@ public class StreetElement extends StackPane {
                 text.setTranslateY(10);
                 getChildren().add(text);
 
-                icon = new ImageView(new Image(Main.class.getResource("/icon/luxuryTax.png").toString()));
+                icon = new ImageView(new Image(Client.class.getResource("/icon/luxuryTax.png").toString()));
                 icon.setFitHeight(40);
                 icon.setFitWidth(40);
                 icon.setTranslateY(5);

@@ -15,7 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
-import nl.UnderKoen.monopoly.client.Main;
+import nl.UnderKoen.monopoly.client.Client;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -25,7 +25,7 @@ import java.util.Scanner;
  * Created by Under_Koen on 22-05-17.
  */
 public class SetupPane extends StackPane {
-    private static String OPTION_DIR = Main.OPTION_DIR;
+    private static String OPTION_DIR = Client.OPTION_DIR;
 
     public SetupPane() {
         setup();
@@ -58,16 +58,16 @@ public class SetupPane extends StackPane {
         vBox.getChildren().add(standardLocation);
 
         TextField location = new TextField();
-        location.setText(Main.getDefaultWorkingDirectory());
+        location.setText(Client.getDefaultWorkingDirectory());
         location.setEditable(false);
         standardLocation.getChildren().add(location);
 
         Button button = new Button("Browse");
         button.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             DirectoryChooser chooser = new DirectoryChooser();
-            chooser.setInitialDirectory(new File(Main.getAppDataDirectory()));
+            chooser.setInitialDirectory(new File(Client.getAppDataDirectory()));
             chooser.setTitle("Standard Location");
-            File selectedDirectory = chooser.showDialog(Main.stage);
+            File selectedDirectory = chooser.showDialog(Client.stage);
             if (selectedDirectory != null) {
                 location.setText(selectedDirectory.getAbsolutePath());
             }
@@ -92,8 +92,8 @@ public class SetupPane extends StackPane {
             } else {
                 confirm.setEffect(null);
                 String[] size = t.getValue().toString().split("X");
-                Main.GAME_WIDHT = Integer.parseInt(size[0]);
-                Main.GAME_HEIGHT = Integer.parseInt(size[1]);
+                Client.GAME_WIDHT = Integer.parseInt(size[0]);
+                Client.GAME_HEIGHT = Integer.parseInt(size[1]);
 
                 //Setting up default location
                 if (!new File(OPTION_DIR).exists()) new File(OPTION_DIR).mkdir();
@@ -110,12 +110,12 @@ public class SetupPane extends StackPane {
                     e.printStackTrace();
                 }
 
-                File workingDir = new File(Main.getWorkingDirectory());
+                File workingDir = new File(Client.getWorkingDirectory());
                 if (!workingDir.exists()) {
                     workingDir.mkdir();
                 }
 
-                Main.nextScene();
+                Client.nextScene();
             }
         });
         File dir = new File(OPTION_DIR + "/.options.json");
