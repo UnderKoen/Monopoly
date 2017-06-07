@@ -1,14 +1,13 @@
-package nl.UnderKoen.monopoly.common.interfaces.map;
+package nl.UnderKoen.monopoly.common.interfaces.map.streets;
 
 import nl.UnderKoen.monopoly.common.enumeration.StreetType;
 import nl.UnderKoen.monopoly.common.interfaces.Player;
-
-import java.io.Serializable;
+import nl.UnderKoen.monopoly.common.interfaces.map.Corner;
 
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public interface JailStreet extends Street, Serializable {
+public interface JailCorner extends Corner {
 
     boolean canMove(Player player);
 

@@ -138,7 +138,7 @@ public class MapElement extends StackPane {
             TownBuilder townBuilder = new TownBuilder();
             townBuilder.setName(town.get("name").getAsString());
             townBuilder.setColor(Color.web(town.get("color").getAsString()));
-            for (JsonElement s : town.get("streets").getAsJsonArray()) {
+            for (JsonElement s : town.get("map").getAsJsonArray()) {
                 JsonObject street = s.getAsJsonObject();
                 townBuilder.addStreet(street.get("name").getAsString(), street.get("price").getAsDouble());
             }

@@ -402,7 +402,7 @@
         },
         {
           "type": "goback",
-          //number of streets
+          //number of map
           "to": 3
         },
         {
@@ -460,7 +460,8 @@
     "START": {
       "message": "Bij passeren krijg €%p",
       //For message %p
-      "pass": 200
+      "pass": 200,
+      "hit": 400
     }
   },
   "order": {

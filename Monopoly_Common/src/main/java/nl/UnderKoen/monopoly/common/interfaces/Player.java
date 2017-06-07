@@ -1,14 +1,19 @@
 package nl.UnderKoen.monopoly.common.interfaces;
 
+import javafx.scene.paint.Color;
 import nl.UnderKoen.monopoly.common.interfaces.map.Street;
-
-import java.io.Serializable;
 
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public interface Player extends Serializable {
+public interface Player {
     boolean isOnStreet(Street street);
 
-    Street getCurrentStreet();
+    Street getStreetStandingOn();
+
+    Color getColor();
+
+    Inventory getInventory();
+
+    String getUsername();
 }

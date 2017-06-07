@@ -14,6 +14,14 @@ public interface Lobby extends Remote {
         LOBBY, STARTING, IN_GAME
     }
 
+    Game getGame() throws RemoteException;
+
+    void setGame(Game game) throws RemoteException;
+
+    void setState(State state) throws RemoteException;
+
+    State getState() throws RemoteException;
+
     Player registerPlayer(String player) throws RemoteException;
 
     List<Player> getPlayers() throws RemoteException;

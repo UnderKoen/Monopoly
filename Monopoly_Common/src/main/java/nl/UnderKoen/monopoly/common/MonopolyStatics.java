@@ -10,5 +10,5 @@ public class MonopolyStatics {
 
     public static final String NUMERIC = "[0-9]";
 
-    public static final String USERNAME = "[a-zA-Z0-9-_]";
+    public static final String USERNAME = "^[a-zA-Z0-9-_]{1,24}\\z";
 }

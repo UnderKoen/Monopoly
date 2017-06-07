@@ -1,16 +1,14 @@
-package nl.UnderKoen.monopoly.common.interfaces.map;
+package nl.UnderKoen.monopoly.common.interfaces.map.streets;
 
 import nl.UnderKoen.monopoly.common.enumeration.StreetType;
 import nl.UnderKoen.monopoly.common.enumeration.SupplyType;
-import nl.UnderKoen.monopoly.common.interfaces.Ownable;
-import nl.UnderKoen.monopoly.common.interfaces.Rentable;
-
-import java.io.Serializable;
+import nl.UnderKoen.monopoly.common.interfaces.map.OwnableStreet;
+import nl.UnderKoen.monopoly.common.interfaces.map.Rentable;
 
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public interface SupplyStreet extends Street, Ownable, Rentable, Serializable {
+public interface SupplyStreet extends OwnableStreet, Rentable {
     SupplyType getSupplyType();
 
     @Override

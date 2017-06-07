@@ -1,17 +1,21 @@
 package nl.UnderKoen.monopoly.common.interfaces.map;
 
 import nl.UnderKoen.monopoly.common.enumeration.StreetType;
+import nl.UnderKoen.monopoly.common.interfaces.Player;
 
-import java.io.Serializable;
-import java.rmi.RemoteException;
+import java.util.List;
 
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public interface Street extends Serializable {
-    int getId() throws RemoteException;
+public interface Street {
+    int getId();
 
-    void setId(int id) throws RemoteException;
+    void setId(int id);
 
-    StreetType getStreetType() throws RemoteException;
+    boolean isStanding(Player player);
+
+    List<Player> getPeopleStanding();
+
+    StreetType getStreetType();
 }

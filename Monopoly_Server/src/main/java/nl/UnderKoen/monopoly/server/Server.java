@@ -20,6 +20,7 @@ public class Server {
         registry.rebind(MonopolyStatics.LOBBY_KEY, svr);
 
         Lobby obj = (Lobby) registry.lookup(MonopolyStatics.LOBBY_KEY);
+
         while (true) {
 
         }

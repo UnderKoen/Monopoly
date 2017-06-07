@@ -1,4 +1,4 @@
-package nl.UnderKoen.monopoly.common.interfaces;
+package nl.UnderKoen.monopoly.common.interfaces.map;
 
 import java.io.Serializable;
 
@@ -9,6 +9,10 @@ public interface Rentable extends Serializable {
     double getBuyPrice();
 
     double getRentPrice();
+
+    default double getMortgagePrice() {
+        return  getBuyPrice()/2;
+    }
 
     boolean isOnMortgage();
 

@@ -1,20 +1,15 @@
 package nl.UnderKoen.monopoly.common.enumeration;
 
-import java.io.Serializable;
-
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public enum StreetType implements Serializable {
+public enum StreetType {
     //Corners
     START, JAIL, VISIT, PARKING,
 
-    //Ownable streets
+    //Ownable map
     NORMAL, STATION, SUPPLY,
 
-    //GetCard
-    CHANCE, COMMUNITY_CHEST,
-
-    //Tax
-    INCOME_TAX, LUXURY_TAX
+    //Special
+    SPECIAL_CARD, TAX
 }
