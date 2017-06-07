@@ -1,10 +1,12 @@
 package nl.UnderKoen.monopoly.common.interfaces.map;
 
+import nl.UnderKoen.monopoly.common.enumeration.StreetType;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.SpecialCardStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.StationStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.SupplyStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.TaxStreet;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -24,6 +26,8 @@ public interface Map {
     List<Corner> getCorners();
 
     List<Street> getOrderdStreets();
+
+    List<Street> getStreets(StreetType streetType) throws RemoteException;
 
     void createMap();
 }

@@ -1,19 +1,26 @@
 package nl.UnderKoen.monopoly.common.interfaces;
 
-import javafx.scene.paint.Color;
+import nl.UnderKoen.monopoly.common.enumeration.Color;
 import nl.UnderKoen.monopoly.common.interfaces.map.Street;
+
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public interface Player {
-    boolean isOnStreet(Street street);
+public interface Player extends Remote {
+    boolean isOnStreet(Street street) throws RemoteException;
 
-    Street getStreetStandingOn();
+    Street getStreetStandingOn() throws RemoteException;
 
-    Color getColor();
+    void setStreetStandingOn(Street street) throws RemoteException;
 
-    Inventory getInventory();
+    Color getColor() throws RemoteException;
 
-    String getUsername();
+    void setColor(Color color) throws RemoteException;
+
+    Inventory getInventory() throws RemoteException;
+
+    String getUsername() throws RemoteException;
 }

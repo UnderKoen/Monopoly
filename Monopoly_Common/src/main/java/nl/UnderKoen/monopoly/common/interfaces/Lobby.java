@@ -1,6 +1,6 @@
 package nl.UnderKoen.monopoly.common.interfaces;
 
-import javafx.scene.paint.Color;
+import nl.UnderKoen.monopoly.common.enumeration.Color;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -22,7 +22,7 @@ public interface Lobby extends Remote {
 
     State getState() throws RemoteException;
 
-    Player registerPlayer(String player) throws RemoteException;
+    Player registerPlayer(String playerName) throws RemoteException;
 
     List<Player> getPlayers() throws RemoteException;
 

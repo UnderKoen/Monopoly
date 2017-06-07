@@ -343,29 +343,23 @@
       "4": 200
     },
     "NORTH": {
-      "name": "STATION\nNOORD",
       "price": 200
     },
     "EAST": {
-      "name": "STATION\nOOST",
       "price": 200
     },
     "SOUTH": {
-      "name": "STATION\nZUID",
       "price": 200
     },
     "WEST": {
-      "name": "STATION\nWEST",
       "price": 200
     }
   },
   "taxes": {
-    "INCOME_TAX": {
-      "name": "INKOMSTEN\nBELASTING",
+    "INCOME": {
       "price": 200
     },
-    "LUXURY_TAX": {
-      "name": "EXTRA\nBELASTING",
+    "LUXURY": {
       "price": 100
     }
   },
@@ -375,135 +369,34 @@
       "2": 10
     },
     "ELECTRICITY": {
-      "name": "ELECTRICITEITS\nBEDRIJF",
       "price": 150
     },
-    "WATER_WORKS": {
-      "name": "WATERLEIDING",
+    "WATER": {
       "price": 150
     }
   },
-  "special": {
+  "specialCard": {
     "CHANCE": {
-      "name": "KANS",
       "cards": [
-        {
-          "type": "pay",
-          "amount": 20
-        },
-        {
-          "type": "get",
-          "amount": "10"
-        },
-        {
-          "type": "goto",
-          //ID of street
-          "to": 15
-        },
-        {
-          "type": "goback",
-          //number of map
-          "to": 3
-        },
-        {
-          "type": "gotoPrison"
-        },
-        {
-          "type": "freeJail"
-        },
-        {
-          "type": "propertyTAX",
-          "house": 25,
-          "hotel": 100
-        }
+        //TODO
       ]
     },
     "COMMUNITY_CHEST": {
-      "name": "ALGEMEEN\nFONDS",
       "cards": [
-        {
-          "type": "pay",
-          "amount": 20
-        },
-        {
-          "type": "payOrTakeCard",
-          "amount": 10
-        },
-        {
-          "type": "get",
-          "amount": "10"
-        },
-        {
-          "type": "getFromEverybody",
-          "amount": 10
-        },
-        {
-          "type": "goto",
-          //ID of street
-          "to": 15
-        },
-        {
-          "type": "goback",
-          //ID of street
-          "to": 3
-        },
-        {
-          "type": "gotoPrison"
-        },
-        {
-          "type": "freeJail"
-        }
+        //TODO
       ]
     }
   },
   "corners": {
     "START": {
-      "message": "Bij passeren krijg €%p",
-      //For message %p
       "pass": 200,
       "hit": 400
+    },
+    "JAIL": {
+      "leave": 50
+    },
+    "PARKING": {
+      "standardJackpot": 100
     }
-  },
-  "order": {
-    "0":"STREET",
-    "1":"COMMUNITY_CHEST",
-    "2":"STREET",
-    "3":"INCOME_TAX",
-    "4":"STATION",
-    "5":"STREET",
-    "6":"CHANCE",
-    "7":"STREET",
-    "8":"STREET",
-    "9":"JAIL",
-    "10":"STREET",
-    "11":"ELECTRICITY",
-    "12":"STREET",
-    "13":"STREET",
-    "14":"STATION",
-    "15":"STREET",
-    "16":"COMMUNITY_CHEST",
-    "17":"STREET",
-    "18":"STREET",
-    "19":"PARKING",
-    "20":"STREET",
-    "21":"CHANCE",
-    "22":"STREET",
-    "23":"STREET",
-    "24":"STATION",
-    "25":"STREET",
-    "26":"STREET",
-    "27":"WATER_WORKS",
-    "28":"STREET",
-    "29":"VISIT",
-    "30":"STREET",
-    "31":"STREET",
-    "32":"COMMUNITY_CHEST",
-    "33":"STREET",
-    "34":"STATION",
-    "35":"CHANCE",
-    "36":"STREET",
-    "37":"LUXURY_TAX",
-    "38":"STREET",
-    "39":"START"
   }
 }

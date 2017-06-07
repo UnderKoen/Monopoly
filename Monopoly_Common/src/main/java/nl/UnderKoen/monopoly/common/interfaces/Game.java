@@ -12,32 +12,27 @@ import java.util.UUID;
  * Created by Under_Koen on 07-06-17.
  */
 public interface Game extends Remote {
+    void start() throws RemoteException;
+
+    Map getMap() throws RemoteException;
+
     void createMap() throws RemoteException;
+
+    void updateMap() throws RemoteException;
 
     int getRound() throws RemoteException;
 
     void nextRound() throws RemoteException;
 
+    Player getTurn() throws RemoteException;
+
     void nextTurn() throws RemoteException;
-
-    void start() throws RemoteException;
-
-    Map getMap() throws RemoteException;
-
-    void updateMap() throws RemoteException;
 
     List<Player> getPlayers() throws RemoteException;
 
-    /**
-     * ordered by order of turns
-     */
-    List<Player> getPlayersOrded() throws RemoteException;
+    void buildHouses(Player player, NormalStreet street, int amount) throws RemoteException;
 
-    Player getTurn() throws RemoteException;
-
-    void buildBuilding(Player player, NormalStreet street, int amount) throws RemoteException;
-
-    void removeBuilding(Player player, NormalStreet street, int amount) throws RemoteException;
+    void removeHouses(Player player, NormalStreet street, int amount) throws RemoteException;
 
     void throwDices() throws RemoteException;
 
@@ -50,4 +45,6 @@ public interface Game extends Remote {
     Throw getLastThrow() throws RemoteException;
 
     void updateInventory() throws RemoteException;
+
+    double getBeginMoney();
 }

@@ -105,7 +105,7 @@ public class MapElement extends StackPane {
 
         //Get file from resources folder
         ClassLoader classLoader = getClass().getClassLoader();
-        InputStream file = classLoader.getResourceAsStream("assets/map.json");
+        InputStream file = classLoader.getResourceAsStream("default/map.json");
 
         try (Scanner scanner = new Scanner(file)) {
 

@@ -11,6 +11,8 @@ public interface FreeParkingCorner extends Corner {
 
     void setJackpot(double jackpot);
 
+    double getStandardJackpot();
+
     void resetJackpot();
 
     @Override

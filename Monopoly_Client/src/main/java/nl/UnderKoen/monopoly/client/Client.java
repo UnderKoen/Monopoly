@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import nl.UnderKoen.monopoly.client.view.scenes.GamePane;
 import nl.UnderKoen.monopoly.client.view.scenes.MainPane;
 import nl.UnderKoen.monopoly.client.view.scenes.SetupPane;
-import nl.UnderKoen.monopoly.common.enumeration.GameStage;
 
 import java.io.File;
 import java.util.Scanner;
@@ -17,6 +16,10 @@ import java.util.Scanner;
  * Created by Under_Koen on 22-05-17.
  */
 public class Client extends Application {
+    enum GameStage {
+        SETUP, MAIN_SCREEN, CREATE_GAME, SELECT_GAME, OPTIONS, GAME
+    }
+
     public static Scene current;
 
     public static GameStage lastGameStage;

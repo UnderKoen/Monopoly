@@ -11,6 +11,8 @@ import java.util.List;
 public interface Street {
     int getId();
 
+    void setId(int id);
+
     boolean isStanding(Player player);
 
     List<Player> getPlayersStanding();
