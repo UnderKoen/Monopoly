@@ -11,6 +11,12 @@ import nl.UnderKoen.monopoly.common.interfaces.map.Rentable;
 public interface SupplyStreet extends OwnableStreet, Rentable {
     SupplyType getSupplyType();
 
+    boolean hasOtherSupplies();
+
+    int getOtherSupplies();
+
+    double getPrice(int amountOfSupplies);
+
     @Override
     default StreetType getStreetType() {
         return StreetType.SUPPLY;

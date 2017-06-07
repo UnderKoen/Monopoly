@@ -9,6 +9,8 @@ import nl.UnderKoen.monopoly.common.interfaces.map.Corner;
 public interface FreeParkingCorner extends Corner {
     double getJackpot();
 
+    void setJackpot(double jackpot);
+
     void resetJackpot();
 
     @Override

@@ -8,12 +8,12 @@ import nl.UnderKoen.monopoly.common.interfaces.map.Corner;
  */
 public interface StartCorner extends Corner {
 
-    double getOnPassPrice();
+    double getOnPassReward();
 
     /**
      * @return the amount of money you get when you come on it
      */
-    double getOnHitPrice();
+    double getOnHitReward();
 
     @Override
     default StreetType getStreetType() {

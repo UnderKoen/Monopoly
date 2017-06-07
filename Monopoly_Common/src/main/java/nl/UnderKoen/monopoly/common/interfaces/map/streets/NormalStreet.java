@@ -22,6 +22,8 @@ public interface NormalStreet extends OwnableStreet, Rentable {
      */
     int getHouses();
 
+    void setHouses(int houses);
+
     Town getTown();
 
     boolean hasFullTown();

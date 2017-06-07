@@ -2,7 +2,6 @@ package nl.UnderKoen.monopoly.common.interfaces.map.streets;
 
 import nl.UnderKoen.monopoly.common.enumeration.StationType;
 import nl.UnderKoen.monopoly.common.enumeration.StreetType;
-import nl.UnderKoen.monopoly.common.interfaces.Player;
 import nl.UnderKoen.monopoly.common.interfaces.map.OwnableStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.Rentable;
 
@@ -12,10 +11,11 @@ import nl.UnderKoen.monopoly.common.interfaces.map.Rentable;
 public interface StationStreet extends OwnableStreet, Rentable {
     StationType getStationType();
 
-    /**
-     * @return the amount of other station the player has
-     */
-    int hasOtherStations(Player player);
+    boolean hasOtherStations();
+
+    int getOtherStations();
+
+    double getPrice(int amountOfStations);
 
     @Override
     default StreetType getStreetType() {
