@@ -94,6 +94,11 @@ public class ServerStationStreet implements StationStreet {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //StationStreet
     private StationType stationType;
     private Map<Integer, Double> prices;

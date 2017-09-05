@@ -6,7 +6,6 @@ import nl.UnderKoen.monopoly.common.interfaces.map.OwnableStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.Street;
 import nl.UnderKoen.monopoly.common.interfaces.map.Town;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.NormalStreet;
-import nl.UnderKoen.monopoly.server.Server;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -20,12 +19,8 @@ public class ServerInventory implements Inventory {
     private List<OwnableStreet> streets;
 
     public ServerInventory() {
-        try {
-            this.money = Server.getLobby().getGame().getBeginMoney();
-            this.streets = new ArrayList<>();
-        } catch (RemoteException e) {
-            e.printStackTrace();
-        }
+        this.money = 0;
+        this.streets = new ArrayList<>();
     }
 
     @Override
@@ -41,14 +36,14 @@ public class ServerInventory implements Inventory {
     @Override
     public List<OwnableStreet> getStreets(StreetType streetType) throws RemoteException {
         List<OwnableStreet> streets = new ArrayList<>(getStreets());
-        streets.removeIf(street -> street.getStreetType() !=streetType);
+        streets.removeIf(street -> street.getStreetType() != streetType);
         return streets;
     }
 
     @Override
     public List<Town> getFullTowns() throws RemoteException {
         List<Town> towns = new ArrayList<>();
-        for (Street streetT: streets) {
+        for (Street streetT : streets) {
             if (streetT instanceof NormalStreet) {
                 NormalStreet street = (NormalStreet) streetT;
                 if (streets.containsAll(street.getTown().getStreets()) && !towns.contains(street.getTown())) {
@@ -77,5 +72,10 @@ public class ServerInventory implements Inventory {
     @Override
     public void removeMoney(double money) throws RemoteException {
         setMoney(getMoney() - money);
+    }
+
+    @Override
+    public boolean hasMoney(double money) throws RemoteException {
+        return (getMoney() - money) >= 0;
     }
 }

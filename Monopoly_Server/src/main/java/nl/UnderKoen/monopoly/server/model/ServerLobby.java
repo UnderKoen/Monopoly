@@ -1,9 +1,9 @@
 package nl.UnderKoen.monopoly.server.model;
 
-import nl.UnderKoen.monopoly.common.enumeration.Color;
 import nl.UnderKoen.monopoly.common.interfaces.Game;
 import nl.UnderKoen.monopoly.common.interfaces.Lobby;
 import nl.UnderKoen.monopoly.common.interfaces.Player;
+import nl.UnderKoen.monopoly.common.utils.Color;
 import nl.UnderKoen.monopoly.server.controller.ServerLobbyController;
 
 import java.rmi.RemoteException;

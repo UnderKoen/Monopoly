@@ -97,6 +97,11 @@ public class ServerSupplyStreet implements SupplyStreet {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //SupplyStreet
     private SupplyType supplyType;
     private Map<Integer, Double> prices;

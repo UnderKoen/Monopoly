@@ -1,7 +1,7 @@
 package nl.UnderKoen.monopoly.common.interfaces;
 
-import nl.UnderKoen.monopoly.common.enumeration.Color;
 import nl.UnderKoen.monopoly.common.interfaces.map.Street;
+import nl.UnderKoen.monopoly.common.utils.Color;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

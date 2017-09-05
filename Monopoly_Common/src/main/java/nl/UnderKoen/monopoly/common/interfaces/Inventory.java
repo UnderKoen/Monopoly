@@ -28,4 +28,6 @@ public interface Inventory extends Remote {
     void addMoney(double money) throws RemoteException;
 
     void removeMoney(double money) throws RemoteException;
+
+    boolean hasMoney(double money) throws RemoteException;
 }

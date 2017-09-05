@@ -1,8 +1,8 @@
 package nl.UnderKoen.monopoly.server.model.map;
 
-import javafx.scene.paint.Color;
 import nl.UnderKoen.monopoly.common.interfaces.map.Town;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.NormalStreet;
+import nl.UnderKoen.monopoly.common.utils.Color;
 
 import java.util.List;
 
@@ -34,8 +34,8 @@ public class ServerTown implements Town {
     }
 
     @Override
-    public Color getColor() {
-        return color;
+    public javafx.scene.paint.Color getColor() {
+        return color.getColor();
     }
 
     public void setColor(Color color) {

@@ -39,6 +39,11 @@ public class ServerFreeParkingCorner implements FreeParkingCorner {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //FreeParkingCorner
     private double jackpot;
     private double standardJackpot;
@@ -64,6 +69,6 @@ public class ServerFreeParkingCorner implements FreeParkingCorner {
 
     @Override
     public void resetJackpot() {
-        setJackpot(0);
+        setJackpot(getStandardJackpot());
     }
 }

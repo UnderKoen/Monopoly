@@ -40,6 +40,11 @@ public class ServerTaxStreet implements TaxStreet {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //TaxStreet
     private TaxType taxType;
     private double taxPrice;

@@ -39,6 +39,11 @@ public class ServerStartCorner implements StartCorner {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //StartCorner
     private double PassReward;
     private double HitReward;

@@ -1,10 +1,10 @@
 package nl.UnderKoen.monopoly.server.controller;
 
-import nl.UnderKoen.monopoly.common.enumeration.Color;
 import nl.UnderKoen.monopoly.common.interfaces.Game;
 import nl.UnderKoen.monopoly.common.interfaces.Lobby;
 import nl.UnderKoen.monopoly.common.interfaces.Lobby.State;
 import nl.UnderKoen.monopoly.common.interfaces.Player;
+import nl.UnderKoen.monopoly.common.utils.Color;
 import nl.UnderKoen.monopoly.common.utils.Scheduler;
 import nl.UnderKoen.monopoly.server.model.ServerPlayer;
 
@@ -59,7 +59,47 @@ public class ServerLobbyController {
 
         Game game = new ServerGame(lobby.getPlayers());
         game.createMap();
+        startupGame(game);
         //TODO startupGame(game);
+    }
+
+    public void startupGame(Game game) throws RemoteException {
+        Game gameSkeleton = (Game) UnicastRemoteObject.exportObject(game, 0);
+        lobby.setState(State.IN_GAME);
+        lobby.setGame(gameSkeleton);
+        List<Runnable> runners = new ArrayList<>();
+        for (Player pl : lobby.getPlayers()) {
+            runners.add(() -> {
+                try {
+                    //TODO start the client
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            });
+        }
+        Scheduler.runAsyncdSync(runners);
+        Scheduler.runAsync(() -> {
+            boolean hasCastException;
+            do {
+                hasCastException = false;
+                try {
+                    Thread.sleep(100L);
+                    for (Player pl : gameSkeleton.getPlayers()) {
+                        //TODO
+                        //UpdateMap updateMap = pl.getUpdateable(UpdateMap.class);
+                        //updateMap.testConnection();
+                    }
+                } catch (Exception ex) {
+                    hasCastException = true;
+                    break;
+                }
+            } while (hasCastException);
+            try {
+                gameSkeleton.start();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
     }
 
     public Player registerPlayer(String username) throws RemoteException {

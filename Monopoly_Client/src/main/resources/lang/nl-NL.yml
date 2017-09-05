@@ -1,0 +1,69 @@
+language:Nederlands
+
+
+
+
+
+
+
+
+
+
+
+#Login
+login.error.nousername.title:Login fout
+login.error.nousername.explanation:Gebruikersnaam is niet ingevuld
+login.error.nousername.details:Exception: 406 Not Acceptable
+login.error.novalidip.title:Login fout
+login.error.novalidip.explanation:Er is geen geldig IP adres ingevuld
+login.error.novalidip.details:Exception: 406 Not Acceptable
+login.error.portnonumber.title:Login fout
+login.error.portnonumber.explanation:Er is geen geldige poortnummer ingevuld
+login.error.portnonumber.details: 406 Not Acceptable
+login.error.ingame.title:Spel al begonnen
+login.error.ingame.explanation:Het spel is al begonnen, u kunt niet meer joinen
+login.error.ingame.details:Exception: 406 Not Accaptable
+
+#SceneLogin
+lobby.label.ip:IP:
+lobby.label.port:Poort:
+lobby.label.username:Naam:
+lobby.label.confirm:Bevestig:
+lobby.button.join:Meedoen
+lobby.error.shouldConfirm.title:Bevestig eerst
+lobby.error.shouldConfirm.explanation:Je moet eerst bevestigen
+lobby.error.shouldConfirm.details:
+
+#kicked
+kicked.other.title:U bent verwijderd uit de lobby
+kicked.other.explanation:Iemand anders heeft ingelogd met dezelfde gebruikersnaam
+kicked.other.details:Exception: 503 Service Unavailable
+kicked.nocolor.title:U bent verwijderd uit de lobby
+kicked.nocolor.explanation:Het spel is begonnen, maar u heeft nog geen kleur
+kicked.nocolor.details.Spelers zonder een kleur kunnen niet meedoen
+kicked.started.title:Het spel is al begonnen
+kicked.started.explanation:Het spel waar u aan probeert mee te doen is al begonnen
+kicked.started.details:Spel wordt al gespeeld
+kicked.closed.title:Server gesloten
+kicked.closed.explanation:De server is gesloten
+kicked.closed.details:Exception: 503 Service Unavailable
+kicked.console.title:Er uit gegooid
+kicked.console.explanation:U bent uit het spel gegooid
+kicked.console.details:Exception: 503 Service Unavailable
+
+#ExceptionManager
+error.connect.notfound.title:Server is niet gevonden
+error.connect.notfound.explanation:De server die u zocht is niet gevonden
+error.connect.notfound.details:Exception: 503 Service Unavailable
+error.version.diffrence.title:Server versie is niet hetzelfde
+error.version.diffrence.explanation:De versie van de server en uw versie komen niet overeen
+error.version.diffrence.details:Exception: 418 I'm a teapot
+error.server.error.title:Server fout
+error.server.error.explanation:Er is iets fout gegaan op de server
+error.server.error.details:Exception: 500 Internal Server Error
+error.remote.unknown.title:Onbekende fout
+error.remote.unknown.explanation:Er is een onbekende fout opgetreden
+error.remote.unknown.details:Exception: 500 Internal Server Error
+error.translation.notfound.title:Vertalingsfout
+error.translation.notfound.explanation:Vertaling is niet gevonden
+error.translation.notfound.details:Exception: 1337 We just don't know any more

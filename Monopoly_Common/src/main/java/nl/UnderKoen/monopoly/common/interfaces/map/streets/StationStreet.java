@@ -3,12 +3,12 @@ package nl.UnderKoen.monopoly.common.interfaces.map.streets;
 import nl.UnderKoen.monopoly.common.enumeration.StationType;
 import nl.UnderKoen.monopoly.common.enumeration.StreetType;
 import nl.UnderKoen.monopoly.common.interfaces.map.OwnableStreet;
-import nl.UnderKoen.monopoly.common.interfaces.map.Rentable;
+import nl.UnderKoen.monopoly.common.interfaces.map.RentableStreet;
 
 /**
  * Created by Under_Koen on 02-06-17.
  */
-public interface StationStreet extends OwnableStreet, Rentable {
+public interface StationStreet extends OwnableStreet, RentableStreet {
     StationType getStationType();
 
     boolean hasOtherStations();

@@ -96,6 +96,11 @@ public class ServerNormalStreet implements NormalStreet {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //NormalStreet
     private double housePrice;
     private int houses;
@@ -134,6 +139,10 @@ public class ServerNormalStreet implements NormalStreet {
     @Override
     public Town getTown() {
         return town;
+    }
+
+    public void setTown(Town town) {
+        this.town = town;
     }
 
     @Override

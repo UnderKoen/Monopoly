@@ -38,4 +38,9 @@ public class ServerVisitJailCorner implements VisitJailCorner {
     public void addPlayerStanding(Player player) {
         this.standing.add(player);
     }
+
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
 }

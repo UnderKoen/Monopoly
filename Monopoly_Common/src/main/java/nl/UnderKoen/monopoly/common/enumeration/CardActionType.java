@@ -11,7 +11,7 @@ public enum CardActionType {
     GOBACKTO,
     GOBACK,
     GOTOPRISON,
-    FREEJAIL,
+    //FREEJAIL,
     GETFROMEVERYONE,
     PROPERTYTAX;
 }

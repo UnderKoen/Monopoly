@@ -379,11 +379,20 @@
     "CHANCE": {
       "cards": [
         //TODO
+        /*
+        {
+          "type":"GOTOPRISON",
+          "":""
+        },*/
+        "GOTOPRISON",
+        "PROPERTYTAX"
       ]
     },
     "COMMUNITY_CHEST": {
       "cards": [
         //TODO
+        "PAY",
+        "GOTO"
       ]
     }
   },

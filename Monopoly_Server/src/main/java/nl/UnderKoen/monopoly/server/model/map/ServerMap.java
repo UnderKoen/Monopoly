@@ -9,7 +9,10 @@ import nl.UnderKoen.monopoly.common.interfaces.map.Map;
 import nl.UnderKoen.monopoly.common.interfaces.map.Street;
 import nl.UnderKoen.monopoly.common.interfaces.map.Town;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.*;
+import nl.UnderKoen.monopoly.common.utils.Color;
 import nl.UnderKoen.monopoly.server.Server;
+import nl.UnderKoen.monopoly.server.model.ServerCard;
+import nl.UnderKoen.monopoly.server.model.ServerCardAction;
 import nl.UnderKoen.monopoly.server.model.map.streets.*;
 
 import java.io.InputStream;
@@ -121,6 +124,11 @@ public class ServerMap implements Map {
     }
 
     @Override
+    public Street getStreet(int id) {
+        return ordered.get(id);
+    }
+
+    @Override
     public void createMap() {
         ordered = new ArrayList<>();
 
@@ -131,9 +139,34 @@ public class ServerMap implements Map {
         //Towns
         towns = new ArrayList<>();
 
+        int i2 = 0;
         for (JsonElement t : mapInfo.getAsJsonArray("towns")) {
-            JsonObject town = t.getAsJsonObject();
-            //TODO
+            JsonObject townInfo = t.getAsJsonObject();
+            ServerTown town = new ServerTown();
+            town.setId(i2);
+            town.setColor(new Color(townInfo.get("color").getAsString()));
+            town.setName(townInfo.get("name").getAsString());
+            List<NormalStreet> streets = new ArrayList<>();
+            for (JsonElement street: townInfo.getAsJsonArray("streets")) {
+                JsonObject streetInfo = street.getAsJsonObject();
+                ServerNormalStreet normalStreet = new ServerNormalStreet();
+                normalStreet.setMortgage(false);
+                normalStreet.setName(streetInfo.get("name").getAsString());
+                normalStreet.setBuyPrice(streetInfo.get("price").getAsDouble());
+                normalStreet.setHousePrice(streetInfo.get("housePrice").getAsDouble());
+                java.util.Map<Integer, Double> prices = new HashMap<>();
+                prices.put(0, streetInfo.getAsJsonObject("rent").get("none").getAsDouble());
+                prices.put(1, streetInfo.getAsJsonObject("rent").get("1").getAsDouble());
+                prices.put(2, streetInfo.getAsJsonObject("rent").get("2").getAsDouble());
+                prices.put(3, streetInfo.getAsJsonObject("rent").get("3").getAsDouble());
+                prices.put(4, streetInfo.getAsJsonObject("rent").get("4").getAsDouble());
+                prices.put(5, streetInfo.getAsJsonObject("rent").get("hotel").getAsDouble());
+                normalStreet.setTown(town);
+                streets.add(normalStreet);
+            }
+            town.setStreets(streets);
+            towns.add(town);
+            i2++;
         }
 
         //Stations
@@ -184,11 +217,19 @@ public class ServerMap implements Map {
         //SpecialCardStreets
         specialCardStreets = new ArrayList<>();
 
-        JsonObject specialCardsInfo = mapInfo.getAsJsonObject("special");
+        JsonObject specialCardsInfo = mapInfo.getAsJsonObject("specialCard");
         for (SpecialCardType specialCardType : SpecialCardType.values()) {
             ServerSpecialCardStreet specialCardStreet = new ServerSpecialCardStreet();
             specialCardStreet.setSpecialCardType(specialCardType);
-            //TODO specialCardStreet.setCards();
+            for (JsonElement cardInfo: specialCardsInfo.getAsJsonObject(specialCardType.name()).getAsJsonArray("cards")) {
+                ServerCard card = new ServerCard();
+                ServerCardAction cardAction = new ServerCardAction();
+                CardActionType cardType = CardActionType.valueOf(cardInfo.getAsString());
+                cardAction.setActionType(cardType);
+                card.setCardAction(cardAction);
+                card.setType(specialCardType);
+                specialCardStreet.addCards(card);
+            }
             specialCardStreets.add(specialCardStreet);
         }
 

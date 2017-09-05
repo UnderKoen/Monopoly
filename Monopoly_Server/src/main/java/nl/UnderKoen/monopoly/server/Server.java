@@ -30,7 +30,7 @@ public class Server {
         lobby.setController(lobbyController);
         setLobby(lobby);
 
-        Remote lobbySkeleton = UnicastRemoteObject.exportObject(new ServerLobby(), 0);
+        Remote lobbySkeleton = UnicastRemoteObject.exportObject(lobby, 0);
 
         Registry registry = LocateRegistry.createRegistry(1099);
         registry.rebind(MonopolyStatics.LOBBY_KEY, lobbySkeleton);

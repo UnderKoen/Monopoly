@@ -42,6 +42,11 @@ public class ServerSpecialCardStreet implements SpecialCardStreet {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //SpecialCardStreet
     private SpecialCardType specialCardType;
     private List<Card> cards;
@@ -72,5 +77,10 @@ public class ServerSpecialCardStreet implements SpecialCardStreet {
 
     public void setCards(List<Card> cards) {
         this.cards = cards;
+    }
+
+    public void addCards(Card card) {
+        if (cards == null) cards = new ArrayList<>();
+        cards.add(card);
     }
 }

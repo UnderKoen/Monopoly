@@ -39,6 +39,11 @@ public class ServerJailCorner implements JailCorner {
         this.standing.add(player);
     }
 
+    @Override
+    public void removePlayerStanding(Player player) {
+        standing.remove(player);
+    }
+
     //JailCorner
     private List<Player> inJail = new ArrayList<>();
     private double prisonLeavePrice;

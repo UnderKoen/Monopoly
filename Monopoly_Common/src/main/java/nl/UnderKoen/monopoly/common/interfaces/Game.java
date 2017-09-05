@@ -1,6 +1,8 @@
 package nl.UnderKoen.monopoly.common.interfaces;
 
+import nl.UnderKoen.monopoly.common.enumeration.GameState;
 import nl.UnderKoen.monopoly.common.interfaces.map.Map;
+import nl.UnderKoen.monopoly.common.interfaces.map.OwnableStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.streets.NormalStreet;
 
 import java.rmi.Remote;
@@ -20,6 +22,8 @@ public interface Game extends Remote {
 
     void updateMap() throws RemoteException;
 
+    GameState getState() throws RemoteException;
+
     int getRound() throws RemoteException;
 
     void nextRound() throws RemoteException;
@@ -27,6 +31,8 @@ public interface Game extends Remote {
     Player getTurn() throws RemoteException;
 
     void nextTurn() throws RemoteException;
+
+    List<Player> getPlayersOrded() throws RemoteException;
 
     List<Player> getPlayers() throws RemoteException;
 
@@ -46,5 +52,11 @@ public interface Game extends Remote {
 
     void updateInventory() throws RemoteException;
 
-    double getBeginMoney();
+    double getBeginMoney() throws RemoteException;
+
+    void buyStreet(OwnableStreet street, Player player) throws RemoteException;
+
+    void buyHouse(OwnableStreet street, Player player) throws RemoteException;
+
+    void sellHouse(OwnableStreet street, Player player) throws RemoteException;
 }

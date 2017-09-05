@@ -1,26 +1,12 @@
 package nl.UnderKoen.monopoly.client.view.elements;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import javafx.geometry.Pos;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
-import nl.UnderKoen.monopoly.client.builders.TownBuilder;
-import nl.UnderKoen.monopoly.client.entities.Street;
-import nl.UnderKoen.monopoly.client.entities.Town;
-import nl.UnderKoen.monopoly.client.entities.impl.StreetImpl;
-
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 /**
  * Created by Under_Koen on 28-05-17.
  */
 public class MapElement extends StackPane {
-    private List<Street> streets;
+    /*private List<Street> streets;
 
     public MapElement() {
         setup();
@@ -281,5 +267,5 @@ public class MapElement extends StackPane {
                     break;
             }
         }
-    }
+    }*/
 }

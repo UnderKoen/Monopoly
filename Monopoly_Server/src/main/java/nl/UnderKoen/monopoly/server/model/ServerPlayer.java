@@ -1,11 +1,12 @@
 package nl.UnderKoen.monopoly.server.model;
 
-import nl.UnderKoen.monopoly.common.enumeration.Color;
 import nl.UnderKoen.monopoly.common.interfaces.Inventory;
 import nl.UnderKoen.monopoly.common.interfaces.Player;
 import nl.UnderKoen.monopoly.common.interfaces.map.Street;
+import nl.UnderKoen.monopoly.common.utils.Color;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
 /**
  * Created by Under_Koen on 07-06-17.
@@ -18,7 +19,11 @@ public class ServerPlayer implements Player {
 
     public ServerPlayer(String username) {
         this.username = username;
-        this.inventory = new ServerInventory();
+        try {
+            this.inventory = (Inventory) UnicastRemoteObject.exportObject(new ServerInventory(), 0);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

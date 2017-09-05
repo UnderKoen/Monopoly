@@ -2,13 +2,13 @@ package nl.UnderKoen.monopoly.common.interfaces.map.streets;
 
 import nl.UnderKoen.monopoly.common.enumeration.StreetType;
 import nl.UnderKoen.monopoly.common.interfaces.map.OwnableStreet;
-import nl.UnderKoen.monopoly.common.interfaces.map.Rentable;
+import nl.UnderKoen.monopoly.common.interfaces.map.RentableStreet;
 import nl.UnderKoen.monopoly.common.interfaces.map.Town;
 
 /**
  * Created by Under_Koen on 31-05-17.
  */
-public interface NormalStreet extends OwnableStreet, Rentable {
+public interface NormalStreet extends OwnableStreet, RentableStreet {
 
     String getName();
 

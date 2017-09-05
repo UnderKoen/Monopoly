@@ -1,0 +1,70 @@
+language:English
+
+
+
+
+
+
+
+
+
+
+
+#Login
+login.error.nousername.title:No Username
+login.error.nousername.explanation:No username was filled in
+login.error.nousername.details:Exception: 401 Unauthorized
+login.error.novalidip.title:No Valid IP
+login.error.novalidip.explanation:Entered IP Address is invalid
+login.error.novalidip.details:Exception: 406 Not Acceptable
+login.error.portnonumber.title:No Port Number
+login.error.portnonumber.explanation:No port number was filled in
+login.error.portnonumber.details:Exception: 404 Not Found
+login.error.ingame.title:Game already started
+login.error.ingame.explanation:The game already started, you can't join anymore
+login.error.ingame.details:Exception: 406 Not Accaptable
+
+#SceneLogin
+lobby.label.ip:IP:
+lobby.label.port:Port:
+lobby.label.username:Name:
+lobby.label.confirm:Confirm:
+lobby.button.join:Join
+lobby.error.shouldConfirm.title:Confirm first
+lobby.error.shouldConfirm.explanation:You should confirm first
+lobby.error.shouldConfirm.details:
+
+
+#Kicked
+kicked.other.title:You have been removed from the lobby
+kicked.other.explanation:Another user has logged on under the same name
+kicked.other.details:Exception: 503 Service Unavailable
+kicked.nocolor.title:You have been removed from the lobby
+kicked.nocolor.explanation:No colour was selected by the user
+kicked.nocolor.details:User was kicked for not selecting a colour before the game began
+kicked.started.title:The game has already commenced
+kicked.started.explanation:The game you are trying to join has already begun
+kicked.started.details:Unable to join game in progress
+kicked.closed.title:Server closed
+kicked.closed.explanation:The server has been closed
+kicked.closed.details:Exception: 503 Service Unavailable
+kicked.console.title:Kicked
+kicked.console.explanation:You have been kicked out of the game
+kicked.console.details:Exception: 503 Service Unavailable
+
+#ExceptionManager
+error.connect.notfound.title:Server not found
+error.connect.notfound.explanation:This is not the server you are looking for
+error.connect.notfound.details:Exception: 503 Service Unavailable
+error.version.diffrence.title:Uncompatible server version
+error.version.diffrence.explanation:Client version and server version differ
+error.version.diffrence.details:Exception: 418 I'm a teapot
+error.server.error.title:Server error
+error.server.error.explanation: A server error has occurred
+error.server.error.detail:Exception: 500 Internal Server Error
+error.remote.unknown.title:Unknown error
+error.remote.unknown.explanation:An unknown error has occurred
+error.remote.unknown.details:Exception: 1337 We just don't know any more
+error.translation.notfound.title: Translation not found
+error.translation.notfound.explanation:Translation not found
+error.translation.notfound.details:Exception: 409 Conflict
